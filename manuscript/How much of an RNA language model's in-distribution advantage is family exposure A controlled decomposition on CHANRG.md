@@ -63,7 +63,7 @@ All learned arms share one decoder: a U-Net (width 32, 583K parameters) that map
 - **Reference methods:** RNAfold minimum-free-energy (MFE) and RNAfold base-pair-probability thresholding (threshold 0.75).
 - **LoRA / adapter (supplement):** LoRA on 8 modules in layers 29–32 of RiNALMo (163.8K parameters), a parameter-matched rank-64 adapter, and a frozen control, all trained for 1,500 steps with two accumulation steps.
 
-Training: 3 epochs (36,000 updates at N = 12,000), mixed precision, one NVIDIA T4 GPU, seeds 0, 1, 2. The decision threshold is chosen on validation. A second frozen backbone \[name to confirm\] was run in the same way for the main comparison (b2+phys, three seeds).
+Training: 3 epochs (36,000 updates at N = 12,000), mixed precision, one NVIDIA T4 GPU, seeds 0, 1, 2. The decision threshold is chosen on validation. A second frozen backbone, RNA-FM (99.5M parameters, 12 layers, 1280-dim embeddings; Chen et al., 2022), loaded through MultiMolecule in the same way, was run for the main comparison (b2+phys, three seeds).
 
 &#91;image: Figure 1\]
 
@@ -187,7 +187,7 @@ The same tier-level view applies to F1 itself (Table 6). Without an LM, F1 falls
 | nolm+phys | 0.475 | 0.388 | 0.315 |
 | randlm+phys | 0.461 | 0.379 | 0.275 |
 | unet+phys (RiNALMo) | 0.485 | 0.464 | 0.598 |
-| b2+phys (second backbone) | 0.474 | 0.420 | 0.518 |
+| b2+phys (RNA-FM) | 0.474 | 0.420 | 0.518 |
 
 *Table 6. Test macro-F1 by family-size tier (training sequences of the family), three seeds. The three tiers together cover all 1,000 Test sequences.*
 
@@ -197,7 +197,7 @@ In a matched small-budget setting (1,500 steps, 163.8K trainable parameters), Lo
 
 ### 4.8 A second backbone shows the same pattern, with a smaller gain
 
-We repeated the main comparison with a second frozen backbone, \[name, size and source to confirm\], embedded the same way and paired with physics features (b2+phys, three seeds). Its Test macro-F1 was 0.488 and its mean OOD macro-F1 was 0.348, against 0.363 and 0.338 without an LM. The gain over no LM was +0.124 on Test (95% CI 0.037–0.190) and +0.010 OOD (−0.013 to 0.027); the ID–OOD interaction was +0.114 (0.027–0.181). By family-size tier the gain was −0.001 (<10), +0.033 (10–49) and +0.203 (≥50; 0.087–0.260), and with equal weight per family it was +0.010 on Test (−0.004 to 0.023). The pattern matches RiNALMo (gain concentrated in large families, none OOD) but is weaker at every tier.
+We repeated the main comparison with a second frozen backbone, RNA-FM (99.5M parameters, 1280-dim embeddings; Chen et al., 2022), embedded the same way and paired with physics features (b2+phys, three seeds). Its Test macro-F1 was 0.488 and its mean OOD macro-F1 was 0.348, against 0.363 and 0.338 without an LM. The gain over no LM was +0.124 on Test (95% CI 0.037–0.190) and +0.010 OOD (−0.013 to 0.027); the ID–OOD interaction was +0.114 (0.027–0.181). By family-size tier the gain was −0.001 (<10), +0.033 (10–49) and +0.203 (≥50; 0.087–0.260), and with equal weight per family it was +0.010 on Test (−0.004 to 0.023). The pattern matches RiNALMo — the gain is concentrated in the large families and absent out of distribution — but is weaker at every tier.
 
 ## 5. Discussion
 
@@ -209,7 +209,7 @@ We repeated the main comparison with a second frozen backbone, \[name, size and 
 
 ## 6. Limitations
 
-- **Scope.** Two backbones (RiNALMo-giga in every analysis, a second one in the main comparison only), one dataset (CHANRG), frozen embeddings, and a small decoder. Results may differ for other models and for full fine-tuning.
+- **Scope.** Two backbones (RiNALMo-giga in every analysis, RNA-FM in the main comparison only), one dataset (CHANRG), frozen embeddings, and a small decoder. Results may differ for other models and for full fine-tuning.
 - **Subsets and seeds.** Training uses 12,000 sequences and evaluation uses 800–1,000 sequences per split. Main comparisons use three seeds, the cap experiment two, and the scale curve two or three. Seeds estimate training noise only.
 - **Few units on GenC and GenF.** The OOD splits GenC and GenF have 11 and 10 resampling units, and the ≥50 tier has 11 families, so intervals there are wide or fragile.
 - **Exposure is confounded with family.** Large families differ from small ones in more than training count. The cap reduced the gain by about 60%, not entirely, and a within-family estimate was not significant.
@@ -219,7 +219,7 @@ We repeated the main comparison with a second frozen backbone, \[name, size and 
 
 ## 7. Data and code availability
 
-The analysis notebook (v6), the per-sequence count files (npz) and the analysis JSON files will be deposited at GitHub (github.com/nimaone/\[repository name to add\]) with a Zenodo archive \[DOI to add\]. CHANRG and RiNALMo are third-party resources. The MultiMolecule CHANRG dataset card lists AGPL-3.0-or-later and the CHANRG paper is CC BY-NC-SA 4.0 \[confirm which repository was used and check what may be redistributed; we suggest sharing only per-sequence results and counts, not the data\]. RiNALMo code is Apache-2.0 and its weights are CC BY 4.0 (Zenodo record 15043668). The backbone was loaded through MultiMolecule (Chen and Zhu, 2024).
+The pipeline notebook (CHANRG_Paper_Track_v7_DriveBacked.ipynb), the analysis JSON files, the final report tables and the per-stage run logs are available at github.com/nimaone/rnalm-family-exposure; a Zenodo archive with a DOI will follow \[DOI to add\]. CHANRG and RiNALMo are third-party resources; we used the multimolecule/chanrg Hugging Face repository, whose dataset card lists AGPL-3.0-or-later while the CHANRG paper is CC BY-NC-SA 4.0, so no dataset content is redistributed here. RiNALMo code is Apache-2.0 and its weights are CC BY 4.0 (Zenodo record 15043668); the RNA-FM checkpoint is AGPL-3.0-or-later. Both backbones were loaded through MultiMolecule (Chen and Zhu, 2024).
 
 **Competing interests / AI-tool disclosure.** \[Complete according to the policy of the chosen platform.\]
 
@@ -230,4 +230,5 @@ The analysis notebook (v6), the per-sequence count files (npz) and the analysis 
 - Szikszai, M. et al. (2022). Deep learning models for RNA secondary structure prediction (probably) do not generalize across families. [bioRxiv 10.1101/2022.03.21.485135](https://www.biorxiv.org/content/10.1101/2022.03.21.485135); journal version [PubMed 35748706](https://pubmed.ncbi.nlm.nih.gov/35748706/) \[authors, journal and pages to confirm\].
 - Zablocki, L. I., Bugnon, L. A., Gerard, M., Di Persia, L., Stegmayer, G., Milone, D. H. (2024; v2 2025). Benchmark of pretrained RNA language models for RNA secondary structure prediction. [arXiv:2410.16212](https://arxiv.org/abs/2410.16212) \[exact title to confirm\].
 - Galvez, G., Vicens, Q. (2026). Shifu: an integrated framework for deep learning of RNA secondary structure. bioRxiv. [doi:10.64898/2026.07.15.738762](https://www.biorxiv.org/content/10.64898/2026.07.15.738762v1).
+- Chen, J., Hu, Z., Sun, S., Tan, Q., Wang, Y., Yu, Q., Zong, L., Hong, L., Xiao, J., King, I., et al. (2022). Interpretable RNA foundation model from unannotated data for highly accurate RNA structure and function predictions. [arXiv:2204.00300](https://arxiv.org/abs/2204.00300).
 - Chen, Z., Zhu, T. (2024). MultiMolecule. Zenodo. doi:10.5281/zenodo.12638419 \[author list to confirm\].
