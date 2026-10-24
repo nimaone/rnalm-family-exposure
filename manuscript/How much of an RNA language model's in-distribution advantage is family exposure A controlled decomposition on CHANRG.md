@@ -1,6 +1,6 @@
 # How much of an RNA language model's in-distribution advantage is family exposure? A controlled decomposition on CHANRG
 
-Oct 15, 2026 · @nima
+Oct 15, 2026
 
 Nima Baselizadeh¹
 
