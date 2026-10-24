@@ -221,14 +221,16 @@ We repeated the main comparison with a second frozen backbone, RNA-FM (99.5M par
 
 The pipeline notebook (CHANRG_Paper_Track_v7_DriveBacked.ipynb), the analysis JSON files, the final report tables and the per-stage run logs are available at github.com/nimaone/rnalm-family-exposure; a Zenodo archive with a DOI will follow \[DOI to add\]. CHANRG and RiNALMo are third-party resources; we used the multimolecule/chanrg Hugging Face repository, whose dataset card lists AGPL-3.0-or-later while the CHANRG paper is CC BY-NC-SA 4.0, so no dataset content is redistributed here. RiNALMo code is Apache-2.0 and its weights are CC BY 4.0 (Zenodo record 15043668); the RNA-FM checkpoint is AGPL-3.0-or-later. Both backbones were loaded through MultiMolecule (Chen and Zhu, 2024).
 
-**Competing interests / AI-tool disclosure.** \[Complete according to the policy of the chosen platform.\]
+**Competing interests.** The author declares no competing interests.
+
+**Use of AI tools.** In preparing this manuscript, the author used an AI assistant (Claude, Anthropic) for developing the analysis code and for drafting and editing the text. All AI-assisted content was reviewed and edited by the author, who approved the final manuscript and takes full responsibility for its content and for the integrity of the reported results.
 
 ## References
 
-- Penić, R. J., Vlašić, T., Huber, R. G., Wan, Y., Šikić, M. (2025). RiNALMo: general-purpose RNA language models can generalize well on structure prediction tasks. *Nature Communications* 16, 5671. [doi:10.1038/s41467-025-60872-5](https://doi.org/10.1038/s41467-025-60872-5) \[full author list to confirm\]
+- Penić, R. J., Vlašić, T., Huber, R. G., Wan, Y., Šikić, M. (2025). RiNALMo: general-purpose RNA language models can generalize well on structure prediction tasks. *Nature Communications* 16, 5671. [doi:10.1038/s41467-025-60872-5](https://doi.org/10.1038/s41467-025-60872-5).
 - Chen, Z., Deng, Z., Deng, P., Liao, Y., Su, X., Ye, P., Liu, X. (2026). Fair splits flip the leaderboard: CHANRG reveals limited generalization in RNA secondary-structure prediction. [arXiv:2603.22330](https://arxiv.org/abs/2603.22330).
-- Szikszai, M. et al. (2022). Deep learning models for RNA secondary structure prediction (probably) do not generalize across families. [bioRxiv 10.1101/2022.03.21.485135](https://www.biorxiv.org/content/10.1101/2022.03.21.485135); journal version [PubMed 35748706](https://pubmed.ncbi.nlm.nih.gov/35748706/) \[authors, journal and pages to confirm\].
-- Zablocki, L. I., Bugnon, L. A., Gerard, M., Di Persia, L., Stegmayer, G., Milone, D. H. (2024; v2 2025). Benchmark of pretrained RNA language models for RNA secondary structure prediction. [arXiv:2410.16212](https://arxiv.org/abs/2410.16212) \[exact title to confirm\].
+- Szikszai, M., Wise, M., Datta, A., Ward, M., Mathews, D. H. (2022). Deep learning models for RNA secondary structure prediction (probably) do not generalize across families. *Bioinformatics* 38(16), 3892–3899. [doi:10.1093/bioinformatics/btac415](https://doi.org/10.1093/bioinformatics/btac415).
+- Zablocki, L. I., Bugnon, L. A., Gerard, M., Di Persia, L., Stegmayer, G., Milone, D. H. (2024; v2 2025). Comprehensive benchmarking of large language models for RNA secondary structure prediction. [arXiv:2410.16212](https://arxiv.org/abs/2410.16212).
 - Galvez, G., Vicens, Q. (2026). Shifu: an integrated framework for deep learning of RNA secondary structure. bioRxiv. [doi:10.64898/2026.07.15.738762](https://www.biorxiv.org/content/10.64898/2026.07.15.738762v1).
 - Chen, J., Hu, Z., Sun, S., Tan, Q., Wang, Y., Yu, Q., Zong, L., Hong, L., Xiao, J., King, I., et al. (2022). Interpretable RNA foundation model from unannotated data for highly accurate RNA structure and function predictions. [arXiv:2204.00300](https://arxiv.org/abs/2204.00300).
-- Chen, Z., Zhu, T. (2024). MultiMolecule. Zenodo. doi:10.5281/zenodo.12638419 \[author list to confirm\].
+- Chen, Z., Zhu, S. Y. (2024). MultiMolecule. Zenodo. [doi:10.5281/zenodo.12638419](https://doi.org/10.5281/zenodo.12638419).
