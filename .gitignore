@@ -1,0 +1,14 @@
+# secrets — never commit
+hf_token.txt
+*.token
+.env
+
+# python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# os
+.DS_Store
+Thumbs.db
+desktop.ini

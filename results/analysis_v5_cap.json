@@ -1,0 +1,264 @@
+{
+  "caps": [
+    10
+  ],
+  "n_boot": 4000,
+  "10": {
+    "N_cap": 8924,
+    "seeds": [
+      0,
+      1
+    ],
+    "overall": {
+      "full": {
+        "test": 0.1759,
+        "test_ci95": [
+          0.0888,
+          0.2333
+        ],
+        "ood": 0.0444,
+        "ood_ci95": [
+          0.0061,
+          0.0699
+        ],
+        "interaction": 0.1315,
+        "interaction_ci95": [
+          0.0384,
+          0.2029
+        ]
+      },
+      "rand": {
+        "test": 0.172,
+        "test_ci95": [
+          0.0818,
+          0.2329
+        ],
+        "ood": 0.0395,
+        "ood_ci95": [
+          0.0042,
+          0.0639
+        ],
+        "interaction": 0.1325,
+        "interaction_ci95": [
+          0.0379,
+          0.2067
+        ]
+      },
+      "cap": {
+        "test": 0.0729,
+        "test_ci95": [
+          0.0418,
+          0.0904
+        ],
+        "ood": 0.0261,
+        "ood_ci95": [
+          -0.0022,
+          0.0463
+        ],
+        "interaction": 0.0468,
+        "interaction_ci95": [
+          0.0079,
+          0.0813
+        ]
+      }
+    },
+    "contrasts_overall": {
+      "سقف − تصادفی هم‌اندازه": {
+        "test": -0.0991,
+        "test_ci95": [
+          -0.1445,
+          -0.0357
+        ],
+        "ood": -0.0134,
+        "ood_ci95": [
+          -0.0221,
+          -0.0031
+        ],
+        "interaction": -0.0857,
+        "interaction_ci95": [
+          -0.1334,
+          -0.0218
+        ],
+        "p_interaction": 0.001
+      },
+      "تصادفی هم‌اندازه − train کامل": {
+        "test": -0.0039,
+        "test_ci95": [
+          -0.0143,
+          0.0037
+        ],
+        "ood": -0.0049,
+        "ood_ci95": [
+          -0.0139,
+          0.0057
+        ],
+        "interaction": 0.0011,
+        "interaction_ci95": [
+          -0.0148,
+          0.013
+        ],
+        "p_interaction": 0.9778
+      }
+    },
+    "tiers": {
+      "<10": {
+        "n_fam": 11,
+        "n_seq": 36,
+        "full": 0.0057,
+        "rand": 0.0089,
+        "cap": 0.0166,
+        "cap_minus_rand": 0.0077,
+        "cap_minus_rand_ci95": [
+          -0.0099,
+          0.0271
+        ],
+        "p": 0.4199,
+        "seeds_cap_lt_rand": 1,
+        "rand_minus_full": 0.0032,
+        "rand_minus_full_ci95": [
+          -0.0128,
+          0.0186
+        ],
+        "mean_exposure_cap": 7.1,
+        "mean_exposure_full": 7.1
+      },
+      "10–49": {
+        "n_fam": 34,
+        "n_seq": 170,
+        "full": 0.0786,
+        "rand": 0.0722,
+        "cap": 0.0543,
+        "cap_minus_rand": -0.0179,
+        "cap_minus_rand_ci95": [
+          -0.0352,
+          0.0
+        ],
+        "p": 0.051,
+        "seeds_cap_lt_rand": 2,
+        "rand_minus_full": -0.0064,
+        "rand_minus_full_ci95": [
+          -0.0204,
+          0.0075
+        ],
+        "mean_exposure_cap": 10.0,
+        "mean_exposure_full": 21.9
+      },
+      "≥50": {
+        "n_fam": 11,
+        "n_seq": 578,
+        "full": 0.2747,
+        "rand": 0.2699,
+        "cap": 0.1031,
+        "cap_minus_rand": -0.1668,
+        "cap_minus_rand_ci95": [
+          -0.1974,
+          -0.1041
+        ],
+        "p": 0.0005,
+        "seeds_cap_lt_rand": 2,
+        "rand_minus_full": -0.0048,
+        "rand_minus_full_ci95": [
+          -0.0274,
+          0.0059
+        ],
+        "mean_exposure_cap": 10.0,
+        "mean_exposure_full": 688.2
+      }
+    },
+    "benchmark": {
+      "families_ge50_gain_full": 0.2747,
+      "families_ge50_gain_capped": 0.1031,
+      "exposure_matched_reference_gain_full": 0.0492,
+      "n_ref_families": 22,
+      "capped_minus_reference": 0.0539,
+      "capped_minus_reference_ci95": [
+        -0.0035,
+        0.0956
+      ],
+      "p": 0.0565
+    },
+    "top_families": [
+      {
+        "fam": "RF00001",
+        "n_test": 271,
+        "n_full": 1241,
+        "exp_cap": 10,
+        "full": 0.3158,
+        "rand": 0.326,
+        "cap": 0.1123,
+        "seeds_cap_lt_rand": 2
+      },
+      {
+        "fam": "RF00005",
+        "n_test": 63,
+        "n_full": 317,
+        "exp_cap": 10,
+        "full": 0.2489,
+        "rand": 0.2301,
+        "cap": 0.0813,
+        "seeds_cap_lt_rand": 2
+      },
+      {
+        "fam": "RF00174",
+        "n_test": 57,
+        "n_full": 260,
+        "exp_cap": 10,
+        "full": 0.1826,
+        "rand": 0.1799,
+        "cap": 0.1127,
+        "seeds_cap_lt_rand": 2
+      },
+      {
+        "fam": "RF02543",
+        "n_test": 49,
+        "n_full": 213,
+        "exp_cap": 10,
+        "full": 0.3029,
+        "rand": 0.2585,
+        "cap": 0.1148,
+        "seeds_cap_lt_rand": 2
+      },
+      {
+        "fam": "RF00003",
+        "n_test": 48,
+        "n_full": 164,
+        "exp_cap": 10,
+        "full": 0.3024,
+        "rand": 0.2833,
+        "cap": 0.1501,
+        "seeds_cap_lt_rand": 2
+      },
+      {
+        "fam": "RF02271",
+        "n_test": 24,
+        "n_full": 162,
+        "exp_cap": 10,
+        "full": 0.197,
+        "rand": 0.1705,
+        "cap": -0.0092,
+        "seeds_cap_lt_rand": 2
+      },
+      {
+        "fam": "RF00100",
+        "n_test": 15,
+        "n_full": 85,
+        "exp_cap": 10,
+        "full": 0.224,
+        "rand": 0.1526,
+        "cap": -0.0267,
+        "seeds_cap_lt_rand": 2
+      },
+      {
+        "fam": "RF02541",
+        "n_test": 15,
+        "n_full": 68,
+        "exp_cap": 10,
+        "full": 0.2873,
+        "rand": 0.2951,
+        "cap": 0.1686,
+        "seeds_cap_lt_rand": 2
+      }
+    ],
+    "verdict": "سقف سود familyهای بزرگ را کاهش می‌دهد ⇒ مواجههٔ decoder (تعداد نمونهٔ آموزشی همان family) در ایجاد سود نقش علّی دارد."
+  }
+}

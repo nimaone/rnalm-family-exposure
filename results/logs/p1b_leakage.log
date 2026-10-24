@@ -1,0 +1,39 @@
+### p1b_leakage START
+GATE: PASS | ستون‌های سطح: ['family', 'clan', 'architecture', 'super_family'] (family_col=family)
+  سطوح موجود: ['family', 'clan', 'architecture', 'super_family']
+  تعداد برچسب یکتا در کل دیتا: {'family': 4022, 'clan': 145, 'architecture': 18, 'super_family': 1241} | ترتیب درشت→ریز: ['architecture', 'clan', 'super_family', 'family']
+GATE: PASS | train: نگاشت orig_idx → دیتای کامل درست است (12000 توالی)
+GATE: PASS | val: نگاشت orig_idx → دیتای کامل درست است (300 توالی)
+GATE: PASS | test: نگاشت orig_idx → دیتای کامل درست است (1000 توالی)
+GATE: PASS | gena: نگاشت orig_idx → دیتای کامل درست است (1000 توالی)
+GATE: PASS | genc: نگاشت orig_idx → دیتای کامل درست است (1000 توالی)
+GATE: PASS | genf: نگاشت orig_idx → دیتای کامل درست است (800 توالی)
+
+split | سطح | واحد در cap | مشترک با train(cap) | مشترک با train(کامل)
+  val | architecture |    29 |    29 |   164
+  val |         clan |   103 |   103 |   628
+  val | super_family |    70 |    70 |   391
+  val |       family |   111 |   111 |   712   ← واحد بازنمونه
+ test | architecture |    50 |    50 |   163
+ test |         clan |   201 |   201 |   635
+ test | super_family |   130 |   130 |   399
+ test |       family |   224 |   224 |   713   ← واحد بازنمونه
+ gena | architecture |     1 |     0 |     0
+ gena |         clan |    99 |     3 |     3
+ gena | super_family |    99 |     0 |     0   ← واحد بازنمونه
+ gena |       family |   102 |     0 |     0
+ genc | architecture |    28 |     0 |     0
+ genc |         clan |    11 |     0 |     0   ← واحد بازنمونه
+ genc | super_family |    28 |     0 |     0
+ genc |       family |    28 |     0 |     0
+ genf | architecture |     8 |     1 |     1
+ genf |         clan |    10 |     0 |     0   ← واحد بازنمونه
+ genf | super_family |     8 |     1 |     1
+ genf |       family |    10 |     0 |     0
+
+توالی‌های یکسان با train: {'val': (0, 0), 'test': (0, 0), 'gena': (0, 0), 'genc': (0, 0), 'genf': (0, 0)} (cap, کامل)
+GATE: PASS | هر سه split تعمیم family-disjoint از train (زیرمجموعهٔ cap) هستند
+GATE: PASS | family-disjoint از train کامل
+GATE: PASS | هیچ توالی یکسانی بین train و splitهای ارزیابی نیست
+GATE: PASS | هر split OOD حداقل ۱۰ واحد بازنمونه دارد
+### p1b_leakage DONE

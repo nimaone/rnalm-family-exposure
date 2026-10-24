@@ -1,0 +1,9 @@
+### p2b_embed_backbone2 START | device=cuda
+ART_CHECK: embed_done — skip
+
+Traceback (most recent call last):
+  File "/content/rna_plib/drive.py", line 264, in stage
+    yield
+  File "/tmp/ipykernel_38418/3290518811.py", line 40, in <cell line: 0>
+    raise SystemExit(0)
+SystemExit: 0

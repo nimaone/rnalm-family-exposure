@@ -1,0 +1,61 @@
+### p2r_embed_random START | device=cuda
+backbone: RANDOM-INIT(multimolecule/rinalmo-giga, seed=0) | dim=1280 | params=651M
+  train: 500/12000 | 31s
+  train: 1000/12000 | 62s
+  train: 1500/12000 | 94s
+  train: 2000/12000 | 125s
+  train: 2500/12000 | 155s
+  train: 3000/12000 | 187s
+  train: 3500/12000 | 219s
+  train: 4000/12000 | 250s
+  train: 4500/12000 | 281s
+  train: 5000/12000 | 312s
+  train: 5500/12000 | 343s
+  train: 6000/12000 | 374s
+  train: 6500/12000 | 405s
+  train: 7000/12000 | 435s
+  train: 7500/12000 | 466s
+  train: 8000/12000 | 498s
+  train: 8500/12000 | 529s
+  train: 9000/12000 | 560s
+  train: 9500/12000 | 591s
+  train: 10000/12000 | 622s
+  train: 10500/12000 | 653s
+  train: 11000/12000 | 683s
+  train: 11500/12000 | 715s
+  train: 12000/12000 | 746s
+GATE: PASS | train: embeddings متناهی
+  train: میانگین std هر بُعد روی موقعیت‌ها = 0.4840 (≈0 یعنی embedding فروریخته)
+GATE: PASS | train: embedding تصادفی فروپاشیده نیست (std=0.4840)
+  saved train: rows=1285896 dim=1280 (3.29GB)
+  val: 300/300 | 18s
+GATE: PASS | val: embeddings متناهی
+  val: میانگین std هر بُعد روی موقعیت‌ها = 0.4813 (≈0 یعنی embedding فروریخته)
+GATE: PASS | val: embedding تصادفی فروپاشیده نیست (std=0.4813)
+  saved val: rows=36102 dim=1280 (0.09GB)
+  test: 500/1000 | 32s
+  test: 1000/1000 | 62s
+GATE: PASS | test: embeddings متناهی
+  test: میانگین std هر بُعد روی موقعیت‌ها = 0.4618 (≈0 یعنی embedding فروریخته)
+GATE: PASS | test: embedding تصادفی فروپاشیده نیست (std=0.4618)
+  saved test: rows=120934 dim=1280 (0.31GB)
+  gena: 500/1000 | 31s
+  gena: 1000/1000 | 62s
+GATE: PASS | gena: embeddings متناهی
+  gena: میانگین std هر بُعد روی موقعیت‌ها = 0.5165 (≈0 یعنی embedding فروریخته)
+GATE: PASS | gena: embedding تصادفی فروپاشیده نیست (std=0.5165)
+  saved gena: rows=137476 dim=1280 (0.35GB)
+  genc: 500/1000 | 31s
+  genc: 1000/1000 | 62s
+GATE: PASS | genc: embeddings متناهی
+  genc: میانگین std هر بُعد روی موقعیت‌ها = 0.5461 (≈0 یعنی embedding فروریخته)
+GATE: PASS | genc: embedding تصادفی فروپاشیده نیست (std=0.5461)
+  saved genc: rows=110587 dim=1280 (0.28GB)
+  genf: 500/800 | 30s
+  genf: 800/800 | 50s
+GATE: PASS | genf: embeddings متناهی
+  genf: میانگین std هر بُعد روی موقعیت‌ها = 0.5235 (≈0 یعنی embedding فروریخته)
+GATE: PASS | genf: embedding تصادفی فروپاشیده نیست (std=0.5235)
+  saved genf: rows=72531 dim=1280 (0.19GB)
+GATE: PASS | embeddings کامل | RANDOM-INIT(multimolecule/rinalmo-giga, seed=0) dim=1280
+### p2r_embed_random DONE

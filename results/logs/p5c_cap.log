@@ -1,0 +1,100 @@
+### p5c_cap START | caps=[10] seeds=[0, 1] epochs=3
+--- cap=10: N_cap=8924 از 12000 | familyهای بزرگ‌تر از سقف: 73 | توالی‌های حذف‌شده: 3076
+  [cap] N=8924 | family=3484 | بیشترین نمونهٔ یک family=10
+    unet+phys_c10_cap_s0 update 1/26772 loss=0.8582
+    unet+phys_c10_cap_s0 update 5000/26772 loss=0.0419
+    unet+phys_c10_cap_s0 update 10000/26772 loss=0.0176
+    unet+phys_c10_cap_s0 update 15000/26772 loss=0.0188
+    unet+phys_c10_cap_s0 update 20000/26772 loss=0.0188
+    unet+phys_c10_cap_s0 update 25000/26772 loss=0.0560
+      eval test: f1=0.4287 (oracle 0.4289, one-pair 0.4309)
+      eval gena: f1=0.5270 (oracle 0.5372, one-pair 0.5381)
+      eval genc: f1=0.3318 (oracle 0.3338, one-pair 0.3292)
+      eval genf: f1=0.3193 (oracle 0.3245, one-pair 0.3191)
+[unet+phys_c10_cap_s0] val=0.4504 thr=0.5 Test=0.4287 OOD=0.3927 | 469s
+    unet+phys_c10_cap_s1 update 1/26772 loss=0.6625
+    unet+phys_c10_cap_s1 update 5000/26772 loss=0.0592
+    unet+phys_c10_cap_s1 update 10000/26772 loss=0.0202
+    unet+phys_c10_cap_s1 update 15000/26772 loss=0.0767
+    unet+phys_c10_cap_s1 update 20000/26772 loss=0.0390
+    unet+phys_c10_cap_s1 update 25000/26772 loss=0.1076
+      eval test: f1=0.3989 (oracle 0.3989, one-pair 0.3958)
+      eval gena: f1=0.5189 (oracle 0.5219, one-pair 0.5269)
+      eval genc: f1=0.3092 (oracle 0.3109, one-pair 0.3085)
+      eval genf: f1=0.3135 (oracle 0.3167, one-pair 0.3116)
+[unet+phys_c10_cap_s1] val=0.4293 thr=0.65 Test=0.3989 OOD=0.3805 | 912s
+    nolm+phys_c10_cap_s0 update 1/26772 loss=0.7254
+    nolm+phys_c10_cap_s0 update 5000/26772 loss=0.0355
+    nolm+phys_c10_cap_s0 update 10000/26772 loss=0.0196
+    nolm+phys_c10_cap_s0 update 15000/26772 loss=0.0252
+    nolm+phys_c10_cap_s0 update 20000/26772 loss=0.0276
+    nolm+phys_c10_cap_s0 update 25000/26772 loss=0.0212
+      eval test: f1=0.3321 (oracle 0.3320, one-pair 0.3314)
+      eval gena: f1=0.4487 (oracle 0.4480, one-pair 0.4482)
+      eval genc: f1=0.2972 (oracle 0.2977, one-pair 0.2963)
+      eval genf: f1=0.2841 (oracle 0.2874, one-pair 0.2840)
+[nolm+phys_c10_cap_s0] val=0.3724 thr=0.65 Test=0.3321 OOD=0.3433 | 1332s
+    nolm+phys_c10_cap_s1 update 1/26772 loss=0.7329
+    nolm+phys_c10_cap_s1 update 5000/26772 loss=0.0775
+    nolm+phys_c10_cap_s1 update 10000/26772 loss=0.0347
+    nolm+phys_c10_cap_s1 update 15000/26772 loss=0.0790
+    nolm+phys_c10_cap_s1 update 20000/26772 loss=0.0699
+    nolm+phys_c10_cap_s1 update 25000/26772 loss=0.1200
+      eval test: f1=0.3319 (oracle 0.3336, one-pair 0.3316)
+      eval gena: f1=0.4521 (oracle 0.4553, one-pair 0.4516)
+      eval genc: f1=0.2890 (oracle 0.2943, one-pair 0.2883)
+      eval genf: f1=0.2870 (oracle 0.2866, one-pair 0.2864)
+[nolm+phys_c10_cap_s1] val=0.3739 thr=0.8 Test=0.3319 OOD=0.3427 | 1753s
+  [rand] N=8924 | family=3098 | بیشترین نمونهٔ یک family=933
+    unet+phys_c10_rand_s0 update 1/26772 loss=0.8417
+    unet+phys_c10_rand_s0 update 5000/26772 loss=0.0280
+    unet+phys_c10_rand_s0 update 10000/26772 loss=0.0404
+    unet+phys_c10_rand_s0 update 15000/26772 loss=0.0148
+    unet+phys_c10_rand_s0 update 20000/26772 loss=0.0407
+    unet+phys_c10_rand_s0 update 25000/26772 loss=0.0600
+      eval test: f1=0.5264 (oracle 0.5300, one-pair 0.5321)
+      eval gena: f1=0.5468 (oracle 0.5469, one-pair 0.5562)
+      eval genc: f1=0.3203 (oracle 0.3236, one-pair 0.3210)
+      eval genf: f1=0.3224 (oracle 0.3239, one-pair 0.3262)
+[unet+phys_c10_rand_s0] val=0.5301 thr=0.65 Test=0.5264 OOD=0.3965 | 2195s
+    unet+phys_c10_rand_s1 update 1/26772 loss=0.6593
+    unet+phys_c10_rand_s1 update 5000/26772 loss=0.0342
+    unet+phys_c10_rand_s1 update 10000/26772 loss=0.1626
+    unet+phys_c10_rand_s1 update 15000/26772 loss=0.0939
+    unet+phys_c10_rand_s1 update 20000/26772 loss=0.0210
+    unet+phys_c10_rand_s1 update 25000/26772 loss=0.0202
+      eval test: f1=0.5271 (oracle 0.5305, one-pair 0.5416)
+      eval gena: f1=0.5411 (oracle 0.5532, one-pair 0.5573)
+      eval genc: f1=0.3294 (oracle 0.3319, one-pair 0.3284)
+      eval genf: f1=0.3098 (oracle 0.3151, one-pair 0.3083)
+[unet+phys_c10_rand_s1] val=0.5313 thr=0.5 Test=0.5271 OOD=0.3934 | 2632s
+    nolm+phys_c10_rand_s0 update 1/26772 loss=0.7500
+    nolm+phys_c10_rand_s0 update 5000/26772 loss=0.0919
+    nolm+phys_c10_rand_s0 update 10000/26772 loss=0.1139
+    nolm+phys_c10_rand_s0 update 15000/26772 loss=0.0179
+    nolm+phys_c10_rand_s0 update 20000/26772 loss=0.0885
+    nolm+phys_c10_rand_s0 update 25000/26772 loss=0.0259
+      eval test: f1=0.3509 (oracle 0.3522, one-pair 0.3446)
+      eval gena: f1=0.4482 (oracle 0.4484, one-pair 0.4483)
+      eval genc: f1=0.2982 (oracle 0.2980, one-pair 0.2987)
+      eval genf: f1=0.2856 (oracle 0.2929, one-pair 0.2861)
+[nolm+phys_c10_rand_s0] val=0.3884 thr=0.6 Test=0.3509 OOD=0.344 | 3054s
+    nolm+phys_c10_rand_s1 update 1/26772 loss=0.7041
+    nolm+phys_c10_rand_s1 update 5000/26772 loss=0.0404
+    nolm+phys_c10_rand_s1 update 10000/26772 loss=0.1619
+    nolm+phys_c10_rand_s1 update 15000/26772 loss=0.0861
+    nolm+phys_c10_rand_s1 update 20000/26772 loss=0.0255
+    nolm+phys_c10_rand_s1 update 25000/26772 loss=0.0750
+      eval test: f1=0.3493 (oracle 0.3507, one-pair 0.3453)
+      eval gena: f1=0.4291 (oracle 0.4297, one-pair 0.4292)
+      eval genc: f1=0.2944 (oracle 0.2958, one-pair 0.2933)
+      eval genf: f1=0.2872 (oracle 0.2896, one-pair 0.2851)
+[nolm+phys_c10_rand_s1] val=0.3923 thr=0.6 Test=0.3493 OOD=0.3369 | 3474s
+
+cap | cond | arm | Test | OOD (میانگین seedها)
+ 10 | cap  | unet+phys  | 0.414 | 0.387 (2 seed)
+ 10 | cap  | nolm+phys  | 0.332 | 0.343 (2 seed)
+ 10 | rand | unet+phys  | 0.527 | 0.395 (2 seed)
+ 10 | rand | nolm+phys  | 0.350 | 0.340 (2 seed)
+GATE: PASS | آزمایش سقف per-family ذخیره شد (تفسیر در P10d)
+### p5c_cap DONE

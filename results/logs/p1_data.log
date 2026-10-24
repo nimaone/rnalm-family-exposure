@@ -1,0 +1,17 @@
+### p1_data START | quick=False | {'train_n': 12000, 'val_n': 300, 'test_n': 1000, 'gena_n': 1000, 'genc_n': 1000, 'genf_n': 800, 'len_min': 50, 'len_max': 200, 'seed': 42}
+  train.parquet: 123223 rows
+  validation.parquet: 14070 rows
+  test.parquet: 32790 rows
+  ستون‌ها: ['id', 'sequence', 'secondary_structure', 'structural_annotation', 'functional_annotation', 'family', 'clan', 'architecture', 'super_family', 'split']
+GATE: PASS | cols: seq=sequence ss=secondary_structure family=family split=split
+GATE: PASS | splits موجود: ['gena', 'genc', 'genf', 'test', 'train', 'val'] | مقادیر خام: ['GenA', 'GenC', 'GenF', 'Test', 'Train', 'Validation']
+  بعد از فیلتر طول [50,200] و seq==ss: 128814/170083
+  train: {'total_after_filter': 96262, 'subset': 12000, 'families': 3484, 'len_mean': 107.2}
+  val: {'total_after_filter': 10698, 'subset': 300, 'families': 111, 'len_mean': 120.3}
+  test: {'total_after_filter': 10746, 'subset': 1000, 'families': 224, 'len_mean': 120.9}
+  gena: {'total_after_filter': 5396, 'subset': 1000, 'families': 102, 'len_mean': 137.5}
+  genc: {'total_after_filter': 3969, 'subset': 1000, 'families': 28, 'len_mean': 110.6}
+  genf: {'total_after_filter': 1743, 'subset': 800, 'families': 10, 'len_mean': 90.7}
+GATE: PASS | همهٔ splitها ≥ ۵۰ توالی
+  هشدار: خانوادهٔ کم در {'genf': 10} → CI بوت‌استرپ پهن می‌شود
+### p1_data DONE

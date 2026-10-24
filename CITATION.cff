@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this code or the analysis artifacts, please cite them as below."
+title: "How much of an RNA language model's in-distribution advantage is family exposure? A controlled decomposition on CHANRG"
+authors:
+  - family-names: Baselizadeh
+    given-names: Nima
+    email: nimabaselizadeh@gmail.com
+    affiliation: Bu-Ali Sina University, Hamedan, Iran
+type: software
+repository-code: "https://github.com/nimaone/rnalm-family-exposure"
+abstract: >-
+  Companion code and results for a controlled decomposition of the
+  in-distribution advantage of frozen RNA language models (RiNALMo-giga and
+  RNA-FM via MultiMolecule) on the CHANRG RNA secondary-structure benchmark:
+  no-LM and random-weight-LM controls, per-family training caps,
+  size-matched random subsets, a training-scale curve, and family-equal
+  weighting.
+keywords:
+  - RNA secondary structure
+  - RNA language models
+  - out-of-distribution generalization
+  - family exposure
+  - benchmarking
+  - RiNALMo
+  - RNA-FM
+  - CHANRG
+license: MIT
+version: 0.1.0
+date-released: "2026-10-24"

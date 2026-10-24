@@ -1,0 +1,172 @@
+### p5_main START | seeds=[0, 1, 2] epochs=3 device=cuda amp=True
+[unet+phys s0] از checkpoint (پروتکل یکسان) — skip
+[unet+phys s1] از checkpoint (پروتکل یکسان) — skip
+[unet+phys s2] از checkpoint (پروتکل یکسان) — skip
+[unet s0] params=583K | شروع آموزش
+    unet s0 update 1/36000 loss=0.6897
+    unet s0 update 2000/36000 loss=0.0618
+    unet s0 update 4000/36000 loss=0.0187
+    unet s0 update 6000/36000 loss=0.3239
+    unet s0 update 8000/36000 loss=0.0373
+    unet s0 update 10000/36000 loss=0.0352
+    unet s0 update 12000/36000 loss=0.0413
+    unet s0 update 14000/36000 loss=0.0416
+    unet s0 update 16000/36000 loss=0.3864
+    unet s0 update 18000/36000 loss=0.0333
+    unet s0 update 20000/36000 loss=0.0084
+    unet s0 update 22000/36000 loss=0.0153
+    unet s0 update 24000/36000 loss=0.0522
+    unet s0 update 26000/36000 loss=0.0373
+    unet s0 update 28000/36000 loss=0.0129
+    unet s0 update 30000/36000 loss=0.0194
+    unet s0 update 32000/36000 loss=0.0303
+    unet s0 update 34000/36000 loss=0.0195
+    unet s0 update 36000/36000 loss=0.0218
+      eval test: f1=0.5541 (oracle 0.5541, one-pair 0.5703)
+      eval gena: f1=0.5098 (oracle 0.5219, one-pair 0.5375)
+      eval genc: f1=0.2839 (oracle 0.3066, one-pair 0.2825)
+      eval genf: f1=0.3402 (oracle 0.3427, one-pair 0.3441)
+[unet s0] val=0.5644 thr=0.5 OOD=0.378 Test=0.5541 GenC=0.2839 | 597s
+[unet s1] params=583K | شروع آموزش
+    unet s1 update 1/36000 loss=0.5020
+    unet s1 update 2000/36000 loss=0.0559
+    unet s1 update 4000/36000 loss=0.0690
+    unet s1 update 6000/36000 loss=0.1349
+    unet s1 update 8000/36000 loss=0.0081
+    unet s1 update 10000/36000 loss=0.0224
+    unet s1 update 12000/36000 loss=0.0687
+    unet s1 update 14000/36000 loss=0.0180
+    unet s1 update 16000/36000 loss=0.0146
+    unet s1 update 18000/36000 loss=0.0279
+    unet s1 update 20000/36000 loss=0.0277
+    unet s1 update 22000/36000 loss=0.1662
+    unet s1 update 24000/36000 loss=0.0307
+    unet s1 update 26000/36000 loss=0.0240
+    unet s1 update 28000/36000 loss=0.0220
+    unet s1 update 30000/36000 loss=0.0369
+    unet s1 update 32000/36000 loss=0.0371
+    unet s1 update 34000/36000 loss=0.1026
+    unet s1 update 36000/36000 loss=0.0387
+      eval test: f1=0.5410 (oracle 0.5418, one-pair 0.5706)
+      eval gena: f1=0.4882 (oracle 0.5049, one-pair 0.5337)
+      eval genc: f1=0.3009 (oracle 0.3030, one-pair 0.3093)
+      eval genf: f1=0.3386 (oracle 0.3376, one-pair 0.3379)
+[unet s1] val=0.5429 thr=0.45 OOD=0.3759 Test=0.541 GenC=0.3009 | 1143s
+[unet s2] params=583K | شروع آموزش
+    unet s2 update 1/36000 loss=0.8111
+    unet s2 update 2000/36000 loss=0.0269
+    unet s2 update 4000/36000 loss=0.0176
+    unet s2 update 6000/36000 loss=0.0366
+    unet s2 update 8000/36000 loss=0.0560
+    unet s2 update 10000/36000 loss=0.0307
+    unet s2 update 12000/36000 loss=0.0810
+    unet s2 update 14000/36000 loss=0.0517
+    unet s2 update 16000/36000 loss=0.0150
+    unet s2 update 18000/36000 loss=0.0184
+    unet s2 update 20000/36000 loss=0.0646
+    unet s2 update 22000/36000 loss=0.0562
+    unet s2 update 24000/36000 loss=0.0473
+    unet s2 update 26000/36000 loss=0.0446
+    unet s2 update 28000/36000 loss=0.0636
+    unet s2 update 30000/36000 loss=0.0166
+    unet s2 update 32000/36000 loss=0.0311
+    unet s2 update 34000/36000 loss=0.0037
+    unet s2 update 36000/36000 loss=0.1583
+      eval test: f1=0.5604 (oracle 0.5603, one-pair 0.5830)
+      eval gena: f1=0.5065 (oracle 0.5159, one-pair 0.5399)
+      eval genc: f1=0.3050 (oracle 0.3104, one-pair 0.3054)
+      eval genf: f1=0.3425 (oracle 0.3439, one-pair 0.3572)
+[unet s2] val=0.5609 thr=0.45 OOD=0.3847 Test=0.5604 GenC=0.305 | 1722s
+[nolm+phys s0] params=542K | شروع آموزش
+    nolm+phys s0 update 1/36000 loss=0.7305
+    nolm+phys s0 update 2000/36000 loss=0.0645
+    nolm+phys s0 update 4000/36000 loss=0.0223
+    nolm+phys s0 update 6000/36000 loss=0.2813
+    nolm+phys s0 update 8000/36000 loss=0.0299
+    nolm+phys s0 update 10000/36000 loss=0.0451
+    nolm+phys s0 update 12000/36000 loss=0.0315
+    nolm+phys s0 update 14000/36000 loss=0.0953
+    nolm+phys s0 update 16000/36000 loss=0.4130
+    nolm+phys s0 update 18000/36000 loss=0.0716
+    nolm+phys s0 update 20000/36000 loss=0.0212
+    nolm+phys s0 update 22000/36000 loss=0.0177
+    nolm+phys s0 update 24000/36000 loss=0.0320
+    nolm+phys s0 update 26000/36000 loss=0.0494
+    nolm+phys s0 update 28000/36000 loss=0.0168
+    nolm+phys s0 update 30000/36000 loss=0.0236
+    nolm+phys s0 update 32000/36000 loss=0.0430
+    nolm+phys s0 update 34000/36000 loss=0.0424
+    nolm+phys s0 update 36000/36000 loss=0.0272
+      eval test: f1=0.3730 (oracle 0.3770, one-pair 0.3642)
+      eval gena: f1=0.4479 (oracle 0.4479, one-pair 0.4518)
+      eval genc: f1=0.2923 (oracle 0.2925, one-pair 0.2936)
+      eval genf: f1=0.2864 (oracle 0.2971, one-pair 0.2870)
+[nolm+phys s0] val=0.4114 thr=0.5 OOD=0.3422 Test=0.373 GenC=0.2923 | 2252s
+[nolm+phys s1] params=542K | شروع آموزش
+    nolm+phys s1 update 1/36000 loss=0.7393
+    nolm+phys s1 update 2000/36000 loss=0.1389
+    nolm+phys s1 update 4000/36000 loss=0.0709
+    nolm+phys s1 update 6000/36000 loss=0.1408
+    nolm+phys s1 update 8000/36000 loss=0.0189
+    nolm+phys s1 update 10000/36000 loss=0.0257
+    nolm+phys s1 update 12000/36000 loss=0.1005
+    nolm+phys s1 update 14000/36000 loss=0.0571
+    nolm+phys s1 update 16000/36000 loss=0.0184
+    nolm+phys s1 update 18000/36000 loss=0.0226
+
+Traceback (most recent call last):
+  File "/content/rna_plib/drive.py", line 264, in stage
+    yield
+  File "/tmp/ipykernel_811/414523843.py", line 56, in <cell line: 0>
+    P.train_decoder(model, spec, splits["train"], seed, n_seq=EPOCHS * len(splits["train"]), accum=1, tag=f"{arm} s{seed}")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/rna_plib/plib.py", line 256, in train_decoder
+    s = arm_scores(model, spec, tr, i, hfn)
+  File "/content/rna_plib/plib.py", line 236, in arm_scores
+    s = model(h, canon, phys)
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/content/rna_plib/plib.py", line 213, in forward
+    return self.unet(torch.cat(parts, -1).permute(2, 0, 1))
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/content/rna_plib/plib.py", line 191, in forward
+    u2 = self.u2(torch.cat([self.up2(u1), d0], 1))
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/content/rna_plib/plib.py", line 163, in forward
+    return self.net(x)
+           ~~~~~~~~^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/conv.py", line 553, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/conv.py", line 548, in _conv_forward
+    return F.conv2d(
+           ~~~~~~~~^
+        input, weight, bias, self.stride, self.padding, self.dilation, self.groups
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+KeyboardInterrupt

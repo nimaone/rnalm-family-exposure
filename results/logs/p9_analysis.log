@@ -1,0 +1,142 @@
+واحد بازنمونه: {'test': {'unit': 'family', 'n_units': 224, 'n_seq': 1000}, 'gena': {'unit': 'super_family', 'n_units': 99, 'n_seq': 1000}, 'genc': {'unit': 'clan', 'n_units': 11, 'n_seq': 1000}, 'genf': {'unit': 'clan', 'n_units': 10, 'n_seq': 800}}
+سامانه‌ها (تعداد seed): {'unet+phys': 3, 'unet': 3, 'nolm+phys': 3, 'randlm+phys': 3, 'rnafold_mfe': 1, 'rnafold_bpp': 1, 'frozen_matched': 3, 'lora_matched': 3, 'adapter_matched': 3}
+
+=== آزمون‌ها (macro-F1) | m=36 آزمون | Holm روی همهٔ آن‌ها ===
+C4a مدل اصلی − RNAfold-MFE         test  Δ=+0.227 CI95[+0.112,+0.309] p=0.001 pHolm=0.018 seeds+3/−0/3 ✅
+C4a مدل اصلی − RNAfold-MFE         gena  Δ=+0.106 CI95[+0.012,+0.179] p=0.011 pHolm=0.304 seeds+3/−0/3 ⬜
+C4a مدل اصلی − RNAfold-MFE         genc  Δ=+0.023 CI95[-0.039,+0.031] p=0.200 pHolm=1.000 seeds+3/−0/3 ⬜
+C4a مدل اصلی − RNAfold-MFE         genf  Δ=+0.029 CI95[-0.006,+0.046] p=0.086 pHolm=1.000 seeds+3/−0/3 ⬜
+C1/C2 سهم LM                       test  Δ=+0.182 CI95[+0.088,+0.246] p=0.001 pHolm=0.018 seeds+3/−0/3 ✅
+C1/C2 سهم LM                       gena  Δ=+0.093 CI95[-0.006,+0.170] p=0.077 pHolm=1.000 seeds+3/−0/3 ⬜
+C1/C2 سهم LM                       genc  Δ=+0.017 CI95[-0.039,+0.030] p=0.262 pHolm=1.000 seeds+3/−0/3 ⬜
+C1/C2 سهم LM                       genf  Δ=+0.021 CI95[-0.006,+0.038] p=0.136 pHolm=1.000 seeds+3/−0/3 ⬜
+C3 سهم فیزیک                       test  Δ=-0.006 CI95[-0.018,+0.011] p=0.535 pHolm=1.000 seeds+0/−3/3 ⬜
+C3 سهم فیزیک                       gena  Δ=+0.031 CI95[+0.005,+0.059] p=0.019 pHolm=0.513 seeds+3/−0/3 ⬜
+C3 سهم فیزیک                       genc  Δ=+0.028 CI95[-0.016,+0.076] p=0.329 pHolm=1.000 seeds+3/−0/3 ⬜
+C3 سهم فیزیک                       genf  Δ=-0.008 CI95[-0.022,+0.011] p=0.310 pHolm=1.000 seeds+0/−3/3 ⬜
+C4c بدون LM − RNAfold-MFE          test  Δ=+0.045 CI95[+0.018,+0.070] p=0.001 pHolm=0.018 seeds+3/−0/3 ✅
+C4c بدون LM − RNAfold-MFE          gena  Δ=+0.013 CI95[+0.003,+0.024] p=0.012 pHolm=0.336 seeds+3/−0/3 ⬜
+C4c بدون LM − RNAfold-MFE          genc  Δ=+0.006 CI95[-0.008,+0.018] p=0.537 pHolm=1.000 seeds+3/−0/3 ⬜
+C4c بدون LM − RNAfold-MFE          genf  Δ=+0.008 CI95[-0.003,+0.022] p=0.177 pHolm=1.000 seeds+3/−0/3 ⬜
+C5a LoRA − frozen                  test  Δ=+0.052 CI95[+0.016,+0.087] p=0.001 pHolm=0.018 seeds+3/−0/3 ✅
+C5a LoRA − frozen                  gena  Δ=+0.018 CI95[-0.003,+0.040] p=0.131 pHolm=1.000 seeds+3/−0/3 ⬜
+C5a LoRA − frozen                  genc  Δ=+0.001 CI95[-0.009,+0.013] p=0.845 pHolm=1.000 seeds+1/−2/3 ⬜
+C5a LoRA − frozen                  genf  Δ=+0.008 CI95[-0.006,+0.024] p=0.339 pHolm=1.000 seeds+2/−1/3 ⬜
+C5b adapter − frozen               test  Δ=+0.014 CI95[-0.006,+0.030] p=0.141 pHolm=1.000 seeds+2/−1/3 ⬜
+C5b adapter − frozen               gena  Δ=-0.003 CI95[-0.023,+0.019] p=0.705 pHolm=1.000 seeds+2/−1/3 ⬜
+C5b adapter − frozen               genc  Δ=+0.000 CI95[-0.009,+0.013] p=0.965 pHolm=1.000 seeds+2/−1/3 ⬜
+C5b adapter − frozen               genf  Δ=+0.004 CI95[-0.009,+0.014] p=0.488 pHolm=1.000 seeds+2/−1/3 ⬜
+C5c LoRA − adapter                 test  Δ=+0.038 CI95[-0.001,+0.088] p=0.065 pHolm=1.000 seeds+3/−0/3 ⬜
+C5c LoRA − adapter                 gena  Δ=+0.020 CI95[-0.005,+0.060] p=0.237 pHolm=1.000 seeds+2/−1/3 ⬜
+C5c LoRA − adapter                 genc  Δ=+0.001 CI95[-0.010,+0.011] p=0.935 pHolm=1.000 seeds+2/−1/3 ⬜
+C5c LoRA − adapter                 genf  Δ=+0.004 CI95[-0.008,+0.015] p=0.607 pHolm=1.000 seeds+2/−1/3 ⬜
+C6 دانش پیش‌آموزش (LM − LM تصادفی) test  Δ=+0.210 CI95[+0.102,+0.285] p=0.001 pHolm=0.018 seeds+3/−0/3 ✅
+C6 دانش پیش‌آموزش (LM − LM تصادفی) gena  Δ=+0.105 CI95[+0.005,+0.182] p=0.024 pHolm=0.611 seeds+3/−0/3 ⬜
+C6 دانش پیش‌آموزش (LM − LM تصادفی) genc  Δ=+0.032 CI95[-0.033,+0.046] p=0.209 pHolm=1.000 seeds+3/−0/3 ⬜
+C6 دانش پیش‌آموزش (LM − LM تصادفی) genf  Δ=+0.024 CI95[-0.001,+0.045] p=0.068 pHolm=1.000 seeds+3/−0/3 ⬜
+C7 ورودی پرابعاد تصادفی − بدون LM  test  Δ=-0.028 CI95[-0.047,-0.010] p=0.001 pHolm=0.018 seeds+0/−3/3 🔻
+C7 ورودی پرابعاد تصادفی − بدون LM  gena  Δ=-0.012 CI95[-0.017,-0.008] p=0.001 pHolm=0.018 seeds+0/−3/3 🔻
+C7 ورودی پرابعاد تصادفی − بدون LM  genc  Δ=-0.015 CI95[-0.031,+0.001] p=0.067 pHolm=1.000 seeds+0/−3/3 ⬜
+C7 ورودی پرابعاد تصادفی − بدون LM  genf  Δ=-0.004 CI95[-0.014,+0.007] p=0.503 pHolm=1.000 seeds+1/−2/3 ⬜
+
+=== آزمون‌ها (micro-F1) | m=36 آزمون | Holm روی همهٔ آن‌ها ===
+C4a مدل اصلی − RNAfold-MFE         test  Δ=+0.237 CI95[+0.134,+0.313] p=0.001 pHolm=0.018 seeds+3/−0/3 ✅
+C4a مدل اصلی − RNAfold-MFE         gena  Δ=+0.116 CI95[+0.025,+0.196] p=0.001 pHolm=0.028 seeds+3/−0/3 ✅
+C4a مدل اصلی − RNAfold-MFE         genc  Δ=+0.051 CI95[-0.028,+0.061] p=0.200 pHolm=1.000 seeds+3/−0/3 ⬜
+C4a مدل اصلی − RNAfold-MFE         genf  Δ=+0.065 CI95[-0.001,+0.084] p=0.051 pHolm=1.000 seeds+3/−0/3 ⬜
+C1/C2 سهم LM                       test  Δ=+0.182 CI95[+0.096,+0.240] p=0.001 pHolm=0.018 seeds+3/−0/3 ✅
+C1/C2 سهم LM                       gena  Δ=+0.090 CI95[+0.000,+0.167] p=0.051 pHolm=1.000 seeds+3/−0/3 ⬜
+C1/C2 سهم LM                       genc  Δ=+0.043 CI95[-0.040,+0.057] p=0.397 pHolm=1.000 seeds+3/−0/3 ⬜
+C1/C2 سهم LM                       genf  Δ=+0.046 CI95[-0.011,+0.064] p=0.120 pHolm=1.000 seeds+3/−0/3 ⬜
+C3 سهم فیزیک                       test  Δ=-0.006 CI95[-0.017,+0.010] p=0.486 pHolm=1.000 seeds+0/−3/3 ⬜
+C3 سهم فیزیک                       gena  Δ=+0.032 CI95[+0.004,+0.064] p=0.019 pHolm=0.507 seeds+3/−0/3 ⬜
+C3 سهم فیزیک                       genc  Δ=+0.037 CI95[-0.016,+0.074] p=0.341 pHolm=1.000 seeds+3/−0/3 ⬜
+C3 سهم فیزیک                       genf  Δ=-0.009 CI95[-0.027,+0.018] p=0.453 pHolm=1.000 seeds+0/−3/3 ⬜
+C4c بدون LM − RNAfold-MFE          test  Δ=+0.055 CI95[+0.031,+0.079] p=0.001 pHolm=0.018 seeds+3/−0/3 ✅
+C4c بدون LM − RNAfold-MFE          gena  Δ=+0.027 CI95[+0.015,+0.036] p=0.001 pHolm=0.018 seeds+3/−0/3 ✅
+C4c بدون LM − RNAfold-MFE          genc  Δ=+0.009 CI95[-0.004,+0.031] p=0.234 pHolm=1.000 seeds+3/−0/3 ⬜
+C4c بدون LM − RNAfold-MFE          genf  Δ=+0.020 CI95[+0.004,+0.030] p=0.028 pHolm=0.687 seeds+3/−0/3 ⬜
+C5a LoRA − frozen                  test  Δ=+0.050 CI95[+0.018,+0.081] p=0.001 pHolm=0.018 seeds+3/−0/3 ✅
+C5a LoRA − frozen                  gena  Δ=+0.018 CI95[+0.001,+0.039] p=0.038 pHolm=0.885 seeds+3/−0/3 ⬜
+C5a LoRA − frozen                  genc  Δ=+0.007 CI95[-0.007,+0.016] p=0.428 pHolm=1.000 seeds+2/−1/3 ⬜
+C5a LoRA − frozen                  genf  Δ=+0.015 CI95[-0.004,+0.026] p=0.095 pHolm=1.000 seeds+3/−0/3 ⬜
+C5b adapter − frozen               test  Δ=+0.011 CI95[-0.008,+0.030] p=0.283 pHolm=1.000 seeds+2/−1/3 ⬜
+C5b adapter − frozen               gena  Δ=-0.001 CI95[-0.022,+0.021] p=0.845 pHolm=1.000 seeds+1/−2/3 ⬜
+C5b adapter − frozen               genc  Δ=-0.002 CI95[-0.005,+0.007] p=0.651 pHolm=1.000 seeds+0/−3/3 ⬜
+C5b adapter − frozen               genf  Δ=+0.005 CI95[-0.003,+0.011] p=0.153 pHolm=1.000 seeds+3/−0/3 ⬜
+C5c LoRA − adapter                 test  Δ=+0.039 CI95[+0.002,+0.083] p=0.031 pHolm=0.744 seeds+3/−0/3 ⬜
+C5c LoRA − adapter                 gena  Δ=+0.019 CI95[-0.009,+0.058] p=0.263 pHolm=1.000 seeds+2/−1/3 ⬜
+C5c LoRA − adapter                 genc  Δ=+0.009 CI95[-0.009,+0.016] p=0.307 pHolm=1.000 seeds+2/−1/3 ⬜
+C5c LoRA − adapter                 genf  Δ=+0.010 CI95[-0.007,+0.020] p=0.254 pHolm=1.000 seeds+3/−0/3 ⬜
+C6 دانش پیش‌آموزش (LM − LM تصادفی) test  Δ=+0.205 CI95[+0.109,+0.273] p=0.001 pHolm=0.018 seeds+3/−0/3 ✅
+C6 دانش پیش‌آموزش (LM − LM تصادفی) gena  Δ=+0.104 CI95[+0.011,+0.185] p=0.013 pHolm=0.364 seeds+3/−0/3 ⬜
+C6 دانش پیش‌آموزش (LM − LM تصادفی) genc  Δ=+0.055 CI95[-0.035,+0.065] p=0.207 pHolm=1.000 seeds+3/−0/3 ⬜
+C6 دانش پیش‌آموزش (LM − LM تصادفی) genf  Δ=+0.042 CI95[-0.010,+0.068] p=0.140 pHolm=1.000 seeds+3/−0/3 ⬜
+C7 ورودی پرابعاد تصادفی − بدون LM  test  Δ=-0.023 CI95[-0.039,-0.010] p=0.001 pHolm=0.018 seeds+0/−3/3 🔻
+C7 ورودی پرابعاد تصادفی − بدون LM  gena  Δ=-0.014 CI95[-0.020,-0.008] p=0.001 pHolm=0.018 seeds+0/−3/3 🔻
+C7 ورودی پرابعاد تصادفی − بدون LM  genc  Δ=-0.013 CI95[-0.030,+0.007] p=0.366 pHolm=1.000 seeds+0/−3/3 ⬜
+C7 ورودی پرابعاد تصادفی − بدون LM  genf  Δ=+0.004 CI95[-0.009,+0.015] p=0.618 pHolm=1.000 seeds+2/−1/3 ⬜
+
+=== شکاف و retention (macro و micro) ===
+[macro] unet+phys    Test 0.546 | gena:0.533 genc:0.302 genf:0.309 | OODmean 0.381 retention 0.70 [0.553, 0.985] gap +0.165 [0.0075, 0.2534]
+[macro] unet         Test 0.552 | gena:0.502 genc:0.274 genf:0.317 | OODmean 0.364 retention 0.66 [0.527, 0.933] gap +0.188 [0.0349, 0.2719]
+[macro] nolm+phys    Test 0.363 | gena:0.440 genc:0.286 genf:0.288 | OODmean 0.338 retention 0.93 [0.689, 1.38] gap +0.025 [-0.1329, 0.1213]
+[macro] randlm+phys  Test 0.336 | gena:0.428 genc:0.270 genf:0.285 | OODmean 0.328 retention 0.98 [0.708, 1.482] gap +0.008 [-0.1554, 0.1093]
+[macro] rnafold_mfe  Test 0.319 | gena:0.427 genc:0.279 genf:0.280 | OODmean 0.329 retention 1.03 [0.735, 1.563] gap -0.010 [-0.1706, 0.0949]
+[micro] unet+phys    Test 0.545 | gena:0.533 genc:0.334 genf:0.332 | OODmean 0.400 retention 0.73 [0.582, 1.006] gap +0.146 [-0.0032, 0.2359]
+[micro] unet         Test 0.552 | gena:0.501 genc:0.297 genf:0.340 | OODmean 0.379 retention 0.69 [0.557, 0.958] gap +0.172 [0.0214, 0.2549]
+[micro] nolm+phys    Test 0.363 | gena:0.444 genc:0.291 genf:0.286 | OODmean 0.340 retention 0.94 [0.698, 1.401] gap +0.023 [-0.1416, 0.1165]
+[micro] randlm+phys  Test 0.340 | gena:0.430 genc:0.279 genf:0.290 | OODmean 0.333 retention 0.98 [0.721, 1.48] gap +0.007 [-0.1596, 0.1041]
+[micro] rnafold_mfe  Test 0.308 | gena:0.417 genc:0.283 genf:0.267 | OODmean 0.322 retention 1.04 [0.747, 1.605] gap -0.014 [-0.1788, 0.087]
+
+=== تعامل: سهم LM (با − بدون) — آیا در OOD کمتر از Test است؟  [Δ(Test) − Δ(OOD)] ===
+[macro] gena    : Δ(Test)=+0.182 Δ(OOD)=+0.093 تعامل=+0.089 CI95[-0.0377, 0.2069] p=0.177
+[macro] genc    : Δ(Test)=+0.182 Δ(OOD)=+0.017 تعامل=+0.166 CI95[0.0727, 0.2448] p=0.0005
+[macro] genf    : Δ(Test)=+0.182 Δ(OOD)=+0.021 تعامل=+0.162 CI95[0.0672, 0.2289] p=0.0005
+[macro] ood_mean: Δ(Test)=+0.182 Δ(OOD)=+0.043 تعامل=+0.139 CI95[0.0433, 0.2133] p=0.0025
+[micro] gena    : Δ(Test)=+0.182 Δ(OOD)=+0.090 تعامل=+0.093 CI95[-0.0244, 0.2003] p=0.1255
+[micro] genc    : Δ(Test)=+0.182 Δ(OOD)=+0.043 تعامل=+0.140 CI95[0.0579, 0.2416] p=0.0005
+[micro] genf    : Δ(Test)=+0.182 Δ(OOD)=+0.046 تعامل=+0.137 CI95[0.0494, 0.2144] p=0.0005
+[micro] ood_mean: Δ(Test)=+0.182 Δ(OOD)=+0.059 تعامل=+0.123 CI95[0.0393, 0.2015] p=0.004
+
+=== تعامل: سهم دانش پیش‌آموزش (LM − LM تصادفی) — آیا در OOD کمتر از Test است؟  [Δ(Test) − Δ(OOD)] ===
+[macro] gena    : Δ(Test)=+0.210 Δ(OOD)=+0.105 تعامل=+0.105 CI95[-0.0344, 0.2282] p=0.1545
+[macro] genc    : Δ(Test)=+0.210 Δ(OOD)=+0.032 تعامل=+0.178 CI95[0.0733, 0.272] p=0.0005
+[macro] genf    : Δ(Test)=+0.210 Δ(OOD)=+0.024 تعامل=+0.186 CI95[0.0762, 0.265] p=0.0005
+[macro] ood_mean: Δ(Test)=+0.210 Δ(OOD)=+0.054 تعامل=+0.157 CI95[0.0473, 0.2442] p=0.002
+[micro] gena    : Δ(Test)=+0.205 Δ(OOD)=+0.104 تعامل=+0.101 CI95[-0.0261, 0.2168] p=0.1315
+[micro] genc    : Δ(Test)=+0.205 Δ(OOD)=+0.055 تعامل=+0.150 CI95[0.0621, 0.2612] p=0.0005
+[micro] genf    : Δ(Test)=+0.205 Δ(OOD)=+0.042 تعامل=+0.164 CI95[0.0639, 0.2468] p=0.0005
+[micro] ood_mean: Δ(Test)=+0.205 Δ(OOD)=+0.067 تعامل=+0.138 CI95[0.045, 0.2263] p=0.003
+
+=== تعامل: سهم ورودی پرابعاد تصادفی (LM تصادفی − بدون LM) — آیا در OOD کمتر از Test است؟  [Δ(Test) − Δ(OOD)] ===
+[macro] gena    : Δ(Test)=-0.028 Δ(OOD)=-0.012 تعامل=-0.016 CI95[-0.0333, 0.003] p=0.144
+[macro] genc    : Δ(Test)=-0.028 Δ(OOD)=-0.015 تعامل=-0.013 CI95[-0.0374, 0.0119] p=0.4149
+[macro] genf    : Δ(Test)=-0.028 Δ(OOD)=-0.004 تعامل=-0.024 CI95[-0.0429, -0.0015] p=0.0345
+[macro] ood_mean: Δ(Test)=-0.028 Δ(OOD)=-0.010 تعامل=-0.018 CI95[-0.0365, 0.0015] p=0.089
+[micro] gena    : Δ(Test)=-0.023 Δ(OOD)=-0.014 تعامل=-0.009 CI95[-0.0257, 0.0058] p=0.3579
+[micro] genc    : Δ(Test)=-0.023 Δ(OOD)=-0.013 تعامل=-0.010 CI95[-0.0351, 0.0139] p=0.5119
+[micro] genf    : Δ(Test)=-0.023 Δ(OOD)=+0.004 تعامل=-0.027 CI95[-0.0421, -0.0063] p=0.0035
+[micro] ood_mean: Δ(Test)=-0.023 Δ(OOD)=-0.008 تعامل=-0.015 CI95[-0.0323, 0.0002] p=0.0555
+
+=== مقایسه با ادبیات (length-matched 50..200؛ انتشار: مدل کامل/سمپل کامل — ما: زیرمجموعه) ===
+منتشرشده: RNAfold                                      Test 0.320 GenA 0.419 GenC 0.280 GenF 0.280 | OODmean 0.326 retention 1.02
+منتشرشده: RiNALMo-giga-U-Net (FM، fine-tune کامل)      Test 0.783 GenA 0.356 GenC 0.152 GenF 0.230 | OODmean 0.246 retention 0.31
+منتشرشده: BPfold (DL)                                  Test 0.450 GenA 0.569 GenC 0.400 GenF 0.280 | OODmean 0.416 retention 0.92
+منتشرشده: EternaFold (SD)                              Test 0.330 GenA 0.461 GenC 0.290 GenF 0.290 | OODmean 0.347 retention 1.05
+ما [macro]: unet+phys                                    Test 0.546 GenA 0.533 GenC 0.302 GenF 0.309 | OODmean 0.381 retention 0.70
+ما [macro]: unet                                         Test 0.552 GenA 0.502 GenC 0.274 GenF 0.317 | OODmean 0.364 retention 0.66
+ما [macro]: nolm+phys                                    Test 0.363 GenA 0.440 GenC 0.286 GenF 0.288 | OODmean 0.338 retention 0.93
+ما [macro]: randlm+phys                                  Test 0.336 GenA 0.428 GenC 0.270 GenF 0.285 | OODmean 0.328 retention 0.98
+ما [macro]: rnafold_mfe                                  Test 0.319 GenA 0.427 GenC 0.279 GenF 0.280 | OODmean 0.329 retention 1.03
+ما [micro]: unet+phys                                    Test 0.545 GenA 0.533 GenC 0.334 GenF 0.332 | OODmean 0.400 retention 0.73
+ما [micro]: unet                                         Test 0.552 GenA 0.501 GenC 0.297 GenF 0.340 | OODmean 0.379 retention 0.69
+ما [micro]: nolm+phys                                    Test 0.363 GenA 0.444 GenC 0.291 GenF 0.286 | OODmean 0.340 retention 0.94
+ما [micro]: randlm+phys                                  Test 0.340 GenA 0.430 GenC 0.279 GenF 0.290 | OODmean 0.333 retention 0.98
+ما [micro]: rnafold_mfe                                  Test 0.308 GenA 0.417 GenC 0.283 GenF 0.267 | OODmean 0.322 retention 1.04
+RNAfold ما − منتشرشده [macro]: {'test': -0.001, 'gena': 0.007, 'genc': -0.001, 'genf': 0.0}  (|Δ|≤0.03 ⇒ پایپ‌لاین و داده هم‌تراز با ادبیات)
+RNAfold ما − منتشرشده [micro]: {'test': -0.012, 'gena': -0.002, 'genc': 0.003, 'genf': -0.013}  (|Δ|≤0.03 ⇒ پایپ‌لاین و داده هم‌تراز با ادبیات)
+
+INFO | آیا «پدیدهٔ ادبیات» بازتولید شد؟ ID(F1)=0.546 (انتشار ≈0.78 با fine-tune کامل) → خیر | retention=0.70 (انتشار ≈0.31) → فروپاشی OOD دیده نمی‌شود (مدل به‌قدر کافی ID را حفظ نکرده یا decoder/آموزش کوچک است)
+
+ذخیره شد: /content/rna_paper_v4/artifacts_paper/analysis_v5.json

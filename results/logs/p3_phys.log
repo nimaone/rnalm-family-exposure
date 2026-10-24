@@ -1,0 +1,15 @@
+### p3_phys START | cpus=2
+  train: معتبر — skip
+  val: معتبر — skip
+  test: معتبر — skip
+  gena: معتبر — skip
+  genc: معتبر — skip
+  genf: معتبر — skip
+GATE: PASS | train: اندازهٔ cache درست (76168148 جفت)
+GATE: PASS | val: اندازهٔ cache درست (2330647 جفت)
+GATE: PASS | test: اندازهٔ cache درست (7904858 جفت)
+GATE: PASS | gena: اندازهٔ cache درست (10143671 جفت)
+GATE: PASS | genc: اندازهٔ cache درست (6665826 جفت)
+GATE: PASS | genf: اندازهٔ cache درست (3421754 جفت)
+GATE: PASS | phys cache کامل | 1s
+### p3_phys DONE

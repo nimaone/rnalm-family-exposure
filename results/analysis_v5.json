@@ -1,0 +1,2262 @@
+{
+  "unit_info": {
+    "test": {
+      "unit": "family",
+      "n_units": 224,
+      "n_seq": 1000
+    },
+    "gena": {
+      "unit": "super_family",
+      "n_units": 99,
+      "n_seq": 1000
+    },
+    "genc": {
+      "unit": "clan",
+      "n_units": 11,
+      "n_seq": 1000
+    },
+    "genf": {
+      "unit": "clan",
+      "n_units": 10,
+      "n_seq": 800
+    }
+  },
+  "n_boot": 4000,
+  "rule": "✅/🔻 فقط اگر p_Holm<0.05 (روی کل خانوادهٔ آزمون‌ها) و Δ در همهٔ seedهای مشترک هم‌علامت باشد؛ CI = بوت‌استرپ واحد×seed",
+  "tests_macro": [
+    {
+      "comp": "C4a مدل اصلی − RNAfold-MFE",
+      "split": "test",
+      "a": "unet+phys",
+      "b": "rnafold_mfe",
+      "valid": true,
+      "delta": 0.2271,
+      "ci95": [
+        0.1116,
+        0.3093
+      ],
+      "p": 0.0005,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 0.018,
+      "status": "✅"
+    },
+    {
+      "comp": "C4a مدل اصلی − RNAfold-MFE",
+      "split": "gena",
+      "a": "unet+phys",
+      "b": "rnafold_mfe",
+      "valid": true,
+      "delta": 0.1061,
+      "ci95": [
+        0.0121,
+        0.1795
+      ],
+      "p": 0.0105,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 0.3044,
+      "status": "⬜"
+    },
+    {
+      "comp": "C4a مدل اصلی − RNAfold-MFE",
+      "split": "genc",
+      "a": "unet+phys",
+      "b": "rnafold_mfe",
+      "valid": true,
+      "delta": 0.0229,
+      "ci95": [
+        -0.0387,
+        0.0306
+      ],
+      "p": 0.2004,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C4a مدل اصلی − RNAfold-MFE",
+      "split": "genf",
+      "a": "unet+phys",
+      "b": "rnafold_mfe",
+      "valid": true,
+      "delta": 0.0289,
+      "ci95": [
+        -0.0062,
+        0.0464
+      ],
+      "p": 0.0865,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C1/C2 سهم LM",
+      "split": "test",
+      "a": "unet+phys",
+      "b": "nolm+phys",
+      "valid": true,
+      "delta": 0.1825,
+      "ci95": [
+        0.0885,
+        0.2458
+      ],
+      "p": 0.0005,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 0.018,
+      "status": "✅"
+    },
+    {
+      "comp": "C1/C2 سهم LM",
+      "split": "gena",
+      "a": "unet+phys",
+      "b": "nolm+phys",
+      "valid": true,
+      "delta": 0.0932,
+      "ci95": [
+        -0.0057,
+        0.1696
+      ],
+      "p": 0.0775,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C1/C2 سهم LM",
+      "split": "genc",
+      "a": "unet+phys",
+      "b": "nolm+phys",
+      "valid": true,
+      "delta": 0.0167,
+      "ci95": [
+        -0.0389,
+        0.0303
+      ],
+      "p": 0.2619,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C1/C2 سهم LM",
+      "split": "genf",
+      "a": "unet+phys",
+      "b": "nolm+phys",
+      "valid": true,
+      "delta": 0.0207,
+      "ci95": [
+        -0.0056,
+        0.038
+      ],
+      "p": 0.136,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C3 سهم فیزیک",
+      "split": "test",
+      "a": "unet+phys",
+      "b": "unet",
+      "valid": true,
+      "delta": -0.006,
+      "ci95": [
+        -0.0179,
+        0.0108
+      ],
+      "p": 0.5349,
+      "seeds_pos": 0,
+      "seeds_neg": 3,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C3 سهم فیزیک",
+      "split": "gena",
+      "a": "unet+phys",
+      "b": "unet",
+      "valid": true,
+      "delta": 0.0311,
+      "ci95": [
+        0.0051,
+        0.0593
+      ],
+      "p": 0.019,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 0.5129,
+      "status": "⬜"
+    },
+    {
+      "comp": "C3 سهم فیزیک",
+      "split": "genc",
+      "a": "unet+phys",
+      "b": "unet",
+      "valid": true,
+      "delta": 0.028,
+      "ci95": [
+        -0.0164,
+        0.0757
+      ],
+      "p": 0.3289,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C3 سهم فیزیک",
+      "split": "genf",
+      "a": "unet+phys",
+      "b": "unet",
+      "valid": true,
+      "delta": -0.0082,
+      "ci95": [
+        -0.0221,
+        0.011
+      ],
+      "p": 0.3099,
+      "seeds_pos": 0,
+      "seeds_neg": 3,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C4c بدون LM − RNAfold-MFE",
+      "split": "test",
+      "a": "nolm+phys",
+      "b": "rnafold_mfe",
+      "valid": true,
+      "delta": 0.0446,
+      "ci95": [
+        0.0177,
+        0.07
+      ],
+      "p": 0.0005,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 0.018,
+      "status": "✅"
+    },
+    {
+      "comp": "C4c بدون LM − RNAfold-MFE",
+      "split": "gena",
+      "a": "nolm+phys",
+      "b": "rnafold_mfe",
+      "valid": true,
+      "delta": 0.013,
+      "ci95": [
+        0.0029,
+        0.0242
+      ],
+      "p": 0.012,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 0.3359,
+      "status": "⬜"
+    },
+    {
+      "comp": "C4c بدون LM − RNAfold-MFE",
+      "split": "genc",
+      "a": "nolm+phys",
+      "b": "rnafold_mfe",
+      "valid": true,
+      "delta": 0.0062,
+      "ci95": [
+        -0.0084,
+        0.0178
+      ],
+      "p": 0.5369,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C4c بدون LM − RNAfold-MFE",
+      "split": "genf",
+      "a": "nolm+phys",
+      "b": "rnafold_mfe",
+      "valid": true,
+      "delta": 0.0082,
+      "ci95": [
+        -0.0026,
+        0.0219
+      ],
+      "p": 0.177,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C5a LoRA − frozen",
+      "split": "test",
+      "a": "lora_matched",
+      "b": "frozen_matched",
+      "valid": true,
+      "delta": 0.0517,
+      "ci95": [
+        0.0157,
+        0.087
+      ],
+      "p": 0.0005,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 0.018,
+      "status": "✅"
+    },
+    {
+      "comp": "C5a LoRA − frozen",
+      "split": "gena",
+      "a": "lora_matched",
+      "b": "frozen_matched",
+      "valid": true,
+      "delta": 0.0176,
+      "ci95": [
+        -0.0034,
+        0.0396
+      ],
+      "p": 0.131,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C5a LoRA − frozen",
+      "split": "genc",
+      "a": "lora_matched",
+      "b": "frozen_matched",
+      "valid": true,
+      "delta": 0.0009,
+      "ci95": [
+        -0.0088,
+        0.013
+      ],
+      "p": 0.8448,
+      "seeds_pos": 1,
+      "seeds_neg": 2,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C5a LoRA − frozen",
+      "split": "genf",
+      "a": "lora_matched",
+      "b": "frozen_matched",
+      "valid": true,
+      "delta": 0.0077,
+      "ci95": [
+        -0.0058,
+        0.0241
+      ],
+      "p": 0.3394,
+      "seeds_pos": 2,
+      "seeds_neg": 1,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C5b adapter − frozen",
+      "split": "test",
+      "a": "adapter_matched",
+      "b": "frozen_matched",
+      "valid": true,
+      "delta": 0.0136,
+      "ci95": [
+        -0.006,
+        0.0302
+      ],
+      "p": 0.141,
+      "seeds_pos": 2,
+      "seeds_neg": 1,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C5b adapter − frozen",
+      "split": "gena",
+      "a": "adapter_matched",
+      "b": "frozen_matched",
+      "valid": true,
+      "delta": -0.0028,
+      "ci95": [
+        -0.0233,
+        0.0186
+      ],
+      "p": 0.7053,
+      "seeds_pos": 2,
+      "seeds_neg": 1,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C5b adapter − frozen",
+      "split": "genc",
+      "a": "adapter_matched",
+      "b": "frozen_matched",
+      "valid": true,
+      "delta": 0.0002,
+      "ci95": [
+        -0.0092,
+        0.0126
+      ],
+      "p": 0.9653,
+      "seeds_pos": 2,
+      "seeds_neg": 1,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C5b adapter − frozen",
+      "split": "genf",
+      "a": "adapter_matched",
+      "b": "frozen_matched",
+      "valid": true,
+      "delta": 0.0042,
+      "ci95": [
+        -0.009,
+        0.014
+      ],
+      "p": 0.4884,
+      "seeds_pos": 2,
+      "seeds_neg": 1,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C5c LoRA − adapter",
+      "split": "test",
+      "a": "lora_matched",
+      "b": "adapter_matched",
+      "valid": true,
+      "delta": 0.0381,
+      "ci95": [
+        -0.0009,
+        0.0877
+      ],
+      "p": 0.0645,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C5c LoRA − adapter",
+      "split": "gena",
+      "a": "lora_matched",
+      "b": "adapter_matched",
+      "valid": true,
+      "delta": 0.0204,
+      "ci95": [
+        -0.0049,
+        0.0604
+      ],
+      "p": 0.2369,
+      "seeds_pos": 2,
+      "seeds_neg": 1,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C5c LoRA − adapter",
+      "split": "genc",
+      "a": "lora_matched",
+      "b": "adapter_matched",
+      "valid": true,
+      "delta": 0.0006,
+      "ci95": [
+        -0.0104,
+        0.0114
+      ],
+      "p": 0.9353,
+      "seeds_pos": 2,
+      "seeds_neg": 1,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C5c LoRA − adapter",
+      "split": "genf",
+      "a": "lora_matched",
+      "b": "adapter_matched",
+      "valid": true,
+      "delta": 0.0035,
+      "ci95": [
+        -0.0084,
+        0.0153
+      ],
+      "p": 0.6068,
+      "seeds_pos": 2,
+      "seeds_neg": 1,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C6 دانش پیش‌آموزش (LM − LM تصادفی)",
+      "split": "test",
+      "a": "unet+phys",
+      "b": "randlm+phys",
+      "valid": true,
+      "delta": 0.2103,
+      "ci95": [
+        0.1016,
+        0.2854
+      ],
+      "p": 0.0005,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 0.018,
+      "status": "✅"
+    },
+    {
+      "comp": "C6 دانش پیش‌آموزش (LM − LM تصادفی)",
+      "split": "gena",
+      "a": "unet+phys",
+      "b": "randlm+phys",
+      "valid": true,
+      "delta": 0.1053,
+      "ci95": [
+        0.0055,
+        0.1822
+      ],
+      "p": 0.0235,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 0.6108,
+      "status": "⬜"
+    },
+    {
+      "comp": "C6 دانش پیش‌آموزش (LM − LM تصادفی)",
+      "split": "genc",
+      "a": "unet+phys",
+      "b": "randlm+phys",
+      "valid": true,
+      "delta": 0.0319,
+      "ci95": [
+        -0.0328,
+        0.0462
+      ],
+      "p": 0.2089,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C6 دانش پیش‌آموزش (LM − LM تصادفی)",
+      "split": "genf",
+      "a": "unet+phys",
+      "b": "randlm+phys",
+      "valid": true,
+      "delta": 0.0243,
+      "ci95": [
+        -0.0014,
+        0.0451
+      ],
+      "p": 0.068,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C7 ورودی پرابعاد تصادفی − بدون LM",
+      "split": "test",
+      "a": "randlm+phys",
+      "b": "nolm+phys",
+      "valid": true,
+      "delta": -0.0278,
+      "ci95": [
+        -0.0469,
+        -0.0098
+      ],
+      "p": 0.0005,
+      "seeds_pos": 0,
+      "seeds_neg": 3,
+      "n_seeds": 3,
+      "p_holm": 0.018,
+      "status": "🔻"
+    },
+    {
+      "comp": "C7 ورودی پرابعاد تصادفی − بدون LM",
+      "split": "gena",
+      "a": "randlm+phys",
+      "b": "nolm+phys",
+      "valid": true,
+      "delta": -0.0121,
+      "ci95": [
+        -0.0171,
+        -0.0078
+      ],
+      "p": 0.0005,
+      "seeds_pos": 0,
+      "seeds_neg": 3,
+      "n_seeds": 3,
+      "p_holm": 0.018,
+      "status": "🔻"
+    },
+    {
+      "comp": "C7 ورودی پرابعاد تصادفی − بدون LM",
+      "split": "genc",
+      "a": "randlm+phys",
+      "b": "nolm+phys",
+      "valid": true,
+      "delta": -0.0152,
+      "ci95": [
+        -0.031,
+        0.0006
+      ],
+      "p": 0.0665,
+      "seeds_pos": 0,
+      "seeds_neg": 3,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C7 ورودی پرابعاد تصادفی − بدون LM",
+      "split": "genf",
+      "a": "randlm+phys",
+      "b": "nolm+phys",
+      "valid": true,
+      "delta": -0.0035,
+      "ci95": [
+        -0.0142,
+        0.0073
+      ],
+      "p": 0.5029,
+      "seeds_pos": 1,
+      "seeds_neg": 2,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    }
+  ],
+  "n_tests_macro": 36,
+  "tests_micro": [
+    {
+      "comp": "C4a مدل اصلی − RNAfold-MFE",
+      "split": "test",
+      "a": "unet+phys",
+      "b": "rnafold_mfe",
+      "valid": true,
+      "delta": 0.237,
+      "ci95": [
+        0.1339,
+        0.3126
+      ],
+      "p": 0.0005,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 0.018,
+      "status": "✅"
+    },
+    {
+      "comp": "C4a مدل اصلی − RNAfold-MFE",
+      "split": "gena",
+      "a": "unet+phys",
+      "b": "rnafold_mfe",
+      "valid": true,
+      "delta": 0.1162,
+      "ci95": [
+        0.0252,
+        0.1958
+      ],
+      "p": 0.001,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 0.028,
+      "status": "✅"
+    },
+    {
+      "comp": "C4a مدل اصلی − RNAfold-MFE",
+      "split": "genc",
+      "a": "unet+phys",
+      "b": "rnafold_mfe",
+      "valid": true,
+      "delta": 0.051,
+      "ci95": [
+        -0.0282,
+        0.0612
+      ],
+      "p": 0.1995,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C4a مدل اصلی − RNAfold-MFE",
+      "split": "genf",
+      "a": "unet+phys",
+      "b": "rnafold_mfe",
+      "valid": true,
+      "delta": 0.0652,
+      "ci95": [
+        -0.0006,
+        0.0836
+      ],
+      "p": 0.051,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C1/C2 سهم LM",
+      "split": "test",
+      "a": "unet+phys",
+      "b": "nolm+phys",
+      "valid": true,
+      "delta": 0.1822,
+      "ci95": [
+        0.0958,
+        0.2401
+      ],
+      "p": 0.0005,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 0.018,
+      "status": "✅"
+    },
+    {
+      "comp": "C1/C2 سهم LM",
+      "split": "gena",
+      "a": "unet+phys",
+      "b": "nolm+phys",
+      "valid": true,
+      "delta": 0.0896,
+      "ci95": [
+        0.0,
+        0.167
+      ],
+      "p": 0.0505,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C1/C2 سهم LM",
+      "split": "genc",
+      "a": "unet+phys",
+      "b": "nolm+phys",
+      "valid": true,
+      "delta": 0.0425,
+      "ci95": [
+        -0.0395,
+        0.0569
+      ],
+      "p": 0.3969,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C1/C2 سهم LM",
+      "split": "genf",
+      "a": "unet+phys",
+      "b": "nolm+phys",
+      "valid": true,
+      "delta": 0.0456,
+      "ci95": [
+        -0.0111,
+        0.064
+      ],
+      "p": 0.1205,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C3 سهم فیزیک",
+      "split": "test",
+      "a": "unet+phys",
+      "b": "unet",
+      "valid": true,
+      "delta": -0.0064,
+      "ci95": [
+        -0.017,
+        0.0097
+      ],
+      "p": 0.4859,
+      "seeds_pos": 0,
+      "seeds_neg": 3,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C3 سهم فیزیک",
+      "split": "gena",
+      "a": "unet+phys",
+      "b": "unet",
+      "valid": true,
+      "delta": 0.0319,
+      "ci95": [
+        0.0044,
+        0.0643
+      ],
+      "p": 0.0195,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 0.5069,
+      "status": "⬜"
+    },
+    {
+      "comp": "C3 سهم فیزیک",
+      "split": "genc",
+      "a": "unet+phys",
+      "b": "unet",
+      "valid": true,
+      "delta": 0.0372,
+      "ci95": [
+        -0.016,
+        0.0744
+      ],
+      "p": 0.3414,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C3 سهم فیزیک",
+      "split": "genf",
+      "a": "unet+phys",
+      "b": "unet",
+      "valid": true,
+      "delta": -0.0087,
+      "ci95": [
+        -0.027,
+        0.0182
+      ],
+      "p": 0.4534,
+      "seeds_pos": 0,
+      "seeds_neg": 3,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C4c بدون LM − RNAfold-MFE",
+      "split": "test",
+      "a": "nolm+phys",
+      "b": "rnafold_mfe",
+      "valid": true,
+      "delta": 0.0548,
+      "ci95": [
+        0.031,
+        0.0788
+      ],
+      "p": 0.0005,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 0.018,
+      "status": "✅"
+    },
+    {
+      "comp": "C4c بدون LM − RNAfold-MFE",
+      "split": "gena",
+      "a": "nolm+phys",
+      "b": "rnafold_mfe",
+      "valid": true,
+      "delta": 0.0266,
+      "ci95": [
+        0.0154,
+        0.0359
+      ],
+      "p": 0.0005,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 0.018,
+      "status": "✅"
+    },
+    {
+      "comp": "C4c بدون LM − RNAfold-MFE",
+      "split": "genc",
+      "a": "nolm+phys",
+      "b": "rnafold_mfe",
+      "valid": true,
+      "delta": 0.0085,
+      "ci95": [
+        -0.0037,
+        0.0314
+      ],
+      "p": 0.2344,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C4c بدون LM − RNAfold-MFE",
+      "split": "genf",
+      "a": "nolm+phys",
+      "b": "rnafold_mfe",
+      "valid": true,
+      "delta": 0.0196,
+      "ci95": [
+        0.0042,
+        0.0302
+      ],
+      "p": 0.0275,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 0.6873,
+      "status": "⬜"
+    },
+    {
+      "comp": "C5a LoRA − frozen",
+      "split": "test",
+      "a": "lora_matched",
+      "b": "frozen_matched",
+      "valid": true,
+      "delta": 0.0499,
+      "ci95": [
+        0.0184,
+        0.0808
+      ],
+      "p": 0.0005,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 0.018,
+      "status": "✅"
+    },
+    {
+      "comp": "C5a LoRA − frozen",
+      "split": "gena",
+      "a": "lora_matched",
+      "b": "frozen_matched",
+      "valid": true,
+      "delta": 0.0181,
+      "ci95": [
+        0.0007,
+        0.0394
+      ],
+      "p": 0.0385,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 0.8853,
+      "status": "⬜"
+    },
+    {
+      "comp": "C5a LoRA − frozen",
+      "split": "genc",
+      "a": "lora_matched",
+      "b": "frozen_matched",
+      "valid": true,
+      "delta": 0.0068,
+      "ci95": [
+        -0.0075,
+        0.0158
+      ],
+      "p": 0.4279,
+      "seeds_pos": 2,
+      "seeds_neg": 1,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C5a LoRA − frozen",
+      "split": "genf",
+      "a": "lora_matched",
+      "b": "frozen_matched",
+      "valid": true,
+      "delta": 0.0152,
+      "ci95": [
+        -0.0039,
+        0.026
+      ],
+      "p": 0.095,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C5b adapter − frozen",
+      "split": "test",
+      "a": "adapter_matched",
+      "b": "frozen_matched",
+      "valid": true,
+      "delta": 0.0113,
+      "ci95": [
+        -0.0083,
+        0.0297
+      ],
+      "p": 0.2834,
+      "seeds_pos": 2,
+      "seeds_neg": 1,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C5b adapter − frozen",
+      "split": "gena",
+      "a": "adapter_matched",
+      "b": "frozen_matched",
+      "valid": true,
+      "delta": -0.0011,
+      "ci95": [
+        -0.0219,
+        0.0215
+      ],
+      "p": 0.8453,
+      "seeds_pos": 1,
+      "seeds_neg": 2,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C5b adapter − frozen",
+      "split": "genc",
+      "a": "adapter_matched",
+      "b": "frozen_matched",
+      "valid": true,
+      "delta": -0.0019,
+      "ci95": [
+        -0.0053,
+        0.0074
+      ],
+      "p": 0.6508,
+      "seeds_pos": 0,
+      "seeds_neg": 3,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C5b adapter − frozen",
+      "split": "genf",
+      "a": "adapter_matched",
+      "b": "frozen_matched",
+      "valid": true,
+      "delta": 0.0049,
+      "ci95": [
+        -0.0033,
+        0.0106
+      ],
+      "p": 0.1535,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C5c LoRA − adapter",
+      "split": "test",
+      "a": "lora_matched",
+      "b": "adapter_matched",
+      "valid": true,
+      "delta": 0.0387,
+      "ci95": [
+        0.0017,
+        0.0832
+      ],
+      "p": 0.031,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 0.7438,
+      "status": "⬜"
+    },
+    {
+      "comp": "C5c LoRA − adapter",
+      "split": "gena",
+      "a": "lora_matched",
+      "b": "adapter_matched",
+      "valid": true,
+      "delta": 0.0192,
+      "ci95": [
+        -0.0095,
+        0.0581
+      ],
+      "p": 0.2634,
+      "seeds_pos": 2,
+      "seeds_neg": 1,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C5c LoRA − adapter",
+      "split": "genc",
+      "a": "lora_matched",
+      "b": "adapter_matched",
+      "valid": true,
+      "delta": 0.0087,
+      "ci95": [
+        -0.0091,
+        0.0162
+      ],
+      "p": 0.3074,
+      "seeds_pos": 2,
+      "seeds_neg": 1,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C5c LoRA − adapter",
+      "split": "genf",
+      "a": "lora_matched",
+      "b": "adapter_matched",
+      "valid": true,
+      "delta": 0.0103,
+      "ci95": [
+        -0.0067,
+        0.0197
+      ],
+      "p": 0.2539,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C6 دانش پیش‌آموزش (LM − LM تصادفی)",
+      "split": "test",
+      "a": "unet+phys",
+      "b": "randlm+phys",
+      "valid": true,
+      "delta": 0.2051,
+      "ci95": [
+        0.1091,
+        0.2726
+      ],
+      "p": 0.0005,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 0.018,
+      "status": "✅"
+    },
+    {
+      "comp": "C6 دانش پیش‌آموزش (LM − LM تصادفی)",
+      "split": "gena",
+      "a": "unet+phys",
+      "b": "randlm+phys",
+      "valid": true,
+      "delta": 0.1038,
+      "ci95": [
+        0.0114,
+        0.1851
+      ],
+      "p": 0.0135,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 0.3644,
+      "status": "⬜"
+    },
+    {
+      "comp": "C6 دانش پیش‌آموزش (LM − LM تصادفی)",
+      "split": "genc",
+      "a": "unet+phys",
+      "b": "randlm+phys",
+      "valid": true,
+      "delta": 0.055,
+      "ci95": [
+        -0.0355,
+        0.0653
+      ],
+      "p": 0.2074,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C6 دانش پیش‌آموزش (LM − LM تصادفی)",
+      "split": "genf",
+      "a": "unet+phys",
+      "b": "randlm+phys",
+      "valid": true,
+      "delta": 0.0415,
+      "ci95": [
+        -0.0097,
+        0.0675
+      ],
+      "p": 0.14,
+      "seeds_pos": 3,
+      "seeds_neg": 0,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C7 ورودی پرابعاد تصادفی − بدون LM",
+      "split": "test",
+      "a": "randlm+phys",
+      "b": "nolm+phys",
+      "valid": true,
+      "delta": -0.0229,
+      "ci95": [
+        -0.0389,
+        -0.0103
+      ],
+      "p": 0.0005,
+      "seeds_pos": 0,
+      "seeds_neg": 3,
+      "n_seeds": 3,
+      "p_holm": 0.018,
+      "status": "🔻"
+    },
+    {
+      "comp": "C7 ورودی پرابعاد تصادفی − بدون LM",
+      "split": "gena",
+      "a": "randlm+phys",
+      "b": "nolm+phys",
+      "valid": true,
+      "delta": -0.0142,
+      "ci95": [
+        -0.0203,
+        -0.0081
+      ],
+      "p": 0.0005,
+      "seeds_pos": 0,
+      "seeds_neg": 3,
+      "n_seeds": 3,
+      "p_holm": 0.018,
+      "status": "🔻"
+    },
+    {
+      "comp": "C7 ورودی پرابعاد تصادفی − بدون LM",
+      "split": "genc",
+      "a": "randlm+phys",
+      "b": "nolm+phys",
+      "valid": true,
+      "delta": -0.0126,
+      "ci95": [
+        -0.0302,
+        0.0073
+      ],
+      "p": 0.3664,
+      "seeds_pos": 0,
+      "seeds_neg": 3,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    },
+    {
+      "comp": "C7 ورودی پرابعاد تصادفی − بدون LM",
+      "split": "genf",
+      "a": "randlm+phys",
+      "b": "nolm+phys",
+      "valid": true,
+      "delta": 0.0041,
+      "ci95": [
+        -0.0088,
+        0.0147
+      ],
+      "p": 0.6183,
+      "seeds_pos": 2,
+      "seeds_neg": 1,
+      "n_seeds": 3,
+      "p_holm": 1.0,
+      "status": "⬜"
+    }
+  ],
+  "n_tests_micro": 36,
+  "gap": {
+    "macro": {
+      "unet+phys": {
+        "test": 0.5459,
+        "gena": {
+          "f1": 0.5329,
+          "retention": 0.976,
+          "retention_ci95": [
+            0.789,
+            1.176
+          ],
+          "gap_test_minus_ood": 0.0131
+        },
+        "genc": {
+          "f1": 0.3022,
+          "retention": 0.554,
+          "retention_ci95": [
+            0.286,
+            1.261
+          ],
+          "gap_test_minus_ood": 0.2437
+        },
+        "genf": {
+          "f1": 0.3091,
+          "retention": 0.566,
+          "retention_ci95": [
+            0.323,
+            1.016
+          ],
+          "gap_test_minus_ood": 0.2368
+        },
+        "ood_mean": {
+          "f1": 0.3814,
+          "retention": 0.699,
+          "retention_ci95": [
+            0.553,
+            0.985
+          ],
+          "gap_test_minus_ood": 0.1645,
+          "gap_ci95": [
+            0.0075,
+            0.2534
+          ]
+        }
+      },
+      "unet": {
+        "test": 0.552,
+        "gena": {
+          "f1": 0.5018,
+          "retention": 0.909,
+          "retention_ci95": [
+            0.697,
+            1.135
+          ],
+          "gap_test_minus_ood": 0.0502
+        },
+        "genc": {
+          "f1": 0.2742,
+          "retention": 0.497,
+          "retention_ci95": [
+            0.3,
+            1.158
+          ],
+          "gap_test_minus_ood": 0.2778
+        },
+        "genf": {
+          "f1": 0.3174,
+          "retention": 0.575,
+          "retention_ci95": [
+            0.343,
+            1.006
+          ],
+          "gap_test_minus_ood": 0.2346
+        },
+        "ood_mean": {
+          "f1": 0.3644,
+          "retention": 0.66,
+          "retention_ci95": [
+            0.527,
+            0.933
+          ],
+          "gap_test_minus_ood": 0.1875,
+          "gap_ci95": [
+            0.0349,
+            0.2719
+          ]
+        }
+      },
+      "nolm+phys": {
+        "test": 0.3634,
+        "gena": {
+          "f1": 0.4397,
+          "retention": 1.21,
+          "retention_ci95": [
+            0.984,
+            1.405
+          ],
+          "gap_test_minus_ood": -0.0763
+        },
+        "genc": {
+          "f1": 0.2856,
+          "retention": 0.786,
+          "retention_ci95": [
+            0.343,
+            1.961
+          ],
+          "gap_test_minus_ood": 0.0778
+        },
+        "genf": {
+          "f1": 0.2884,
+          "retention": 0.794,
+          "retention_ci95": [
+            0.391,
+            1.485
+          ],
+          "gap_test_minus_ood": 0.075
+        },
+        "ood_mean": {
+          "f1": 0.3379,
+          "retention": 0.93,
+          "retention_ci95": [
+            0.689,
+            1.38
+          ],
+          "gap_test_minus_ood": 0.0255,
+          "gap_ci95": [
+            -0.1329,
+            0.1213
+          ]
+        }
+      },
+      "randlm+phys": {
+        "test": 0.3356,
+        "gena": {
+          "f1": 0.4276,
+          "retention": 1.274,
+          "retention_ci95": [
+            1.004,
+            1.516
+          ],
+          "gap_test_minus_ood": -0.0919
+        },
+        "genc": {
+          "f1": 0.2704,
+          "retention": 0.806,
+          "retention_ci95": [
+            0.359,
+            2.086
+          ],
+          "gap_test_minus_ood": 0.0652
+        },
+        "genf": {
+          "f1": 0.2849,
+          "retention": 0.849,
+          "retention_ci95": [
+            0.404,
+            1.615
+          ],
+          "gap_test_minus_ood": 0.0508
+        },
+        "ood_mean": {
+          "f1": 0.3276,
+          "retention": 0.976,
+          "retention_ci95": [
+            0.708,
+            1.482
+          ],
+          "gap_test_minus_ood": 0.008,
+          "gap_ci95": [
+            -0.1554,
+            0.1093
+          ]
+        }
+      },
+      "rnafold_mfe": {
+        "test": 0.3188,
+        "gena": {
+          "f1": 0.4267,
+          "retention": 1.339,
+          "retention_ci95": [
+            1.029,
+            1.627
+          ],
+          "gap_test_minus_ood": -0.1079
+        },
+        "genc": {
+          "f1": 0.2793,
+          "retention": 0.876,
+          "retention_ci95": [
+            0.401,
+            2.202
+          ],
+          "gap_test_minus_ood": 0.0395
+        },
+        "genf": {
+          "f1": 0.2802,
+          "retention": 0.879,
+          "retention_ci95": [
+            0.425,
+            1.673
+          ],
+          "gap_test_minus_ood": 0.0386
+        },
+        "ood_mean": {
+          "f1": 0.3288,
+          "retention": 1.031,
+          "retention_ci95": [
+            0.735,
+            1.563
+          ],
+          "gap_test_minus_ood": -0.01,
+          "gap_ci95": [
+            -0.1706,
+            0.0949
+          ]
+        }
+      }
+    },
+    "micro": {
+      "unet+phys": {
+        "test": 0.5454,
+        "gena": {
+          "f1": 0.5334,
+          "retention": 0.978,
+          "retention_ci95": [
+            0.808,
+            1.152
+          ],
+          "gap_test_minus_ood": 0.012
+        },
+        "genc": {
+          "f1": 0.3337,
+          "retention": 0.612,
+          "retention_ci95": [
+            0.312,
+            1.309
+          ],
+          "gap_test_minus_ood": 0.2117
+        },
+        "genf": {
+          "f1": 0.3317,
+          "retention": 0.608,
+          "retention_ci95": [
+            0.369,
+            1.007
+          ],
+          "gap_test_minus_ood": 0.2137
+        },
+        "ood_mean": {
+          "f1": 0.3996,
+          "retention": 0.733,
+          "retention_ci95": [
+            0.582,
+            1.006
+          ],
+          "gap_test_minus_ood": 0.1458,
+          "gap_ci95": [
+            -0.0032,
+            0.2359
+          ]
+        }
+      },
+      "unet": {
+        "test": 0.5518,
+        "gena": {
+          "f1": 0.5015,
+          "retention": 0.909,
+          "retention_ci95": [
+            0.713,
+            1.105
+          ],
+          "gap_test_minus_ood": 0.0503
+        },
+        "genc": {
+          "f1": 0.2966,
+          "retention": 0.537,
+          "retention_ci95": [
+            0.323,
+            1.227
+          ],
+          "gap_test_minus_ood": 0.2552
+        },
+        "genf": {
+          "f1": 0.3404,
+          "retention": 0.617,
+          "retention_ci95": [
+            0.395,
+            0.99
+          ],
+          "gap_test_minus_ood": 0.2114
+        },
+        "ood_mean": {
+          "f1": 0.3795,
+          "retention": 0.688,
+          "retention_ci95": [
+            0.557,
+            0.958
+          ],
+          "gap_test_minus_ood": 0.1723,
+          "gap_ci95": [
+            0.0214,
+            0.2549
+          ]
+        }
+      },
+      "nolm+phys": {
+        "test": 0.3632,
+        "gena": {
+          "f1": 0.4438,
+          "retention": 1.222,
+          "retention_ci95": [
+            0.997,
+            1.415
+          ],
+          "gap_test_minus_ood": -0.0806
+        },
+        "genc": {
+          "f1": 0.2913,
+          "retention": 0.802,
+          "retention_ci95": [
+            0.343,
+            2.032
+          ],
+          "gap_test_minus_ood": 0.072
+        },
+        "genf": {
+          "f1": 0.2861,
+          "retention": 0.788,
+          "retention_ci95": [
+            0.397,
+            1.488
+          ],
+          "gap_test_minus_ood": 0.0771
+        },
+        "ood_mean": {
+          "f1": 0.3404,
+          "retention": 0.937,
+          "retention_ci95": [
+            0.698,
+            1.401
+          ],
+          "gap_test_minus_ood": 0.0228,
+          "gap_ci95": [
+            -0.1416,
+            0.1165
+          ]
+        }
+      },
+      "randlm+phys": {
+        "test": 0.3403,
+        "gena": {
+          "f1": 0.4296,
+          "retention": 1.262,
+          "retention_ci95": [
+            1.0,
+            1.482
+          ],
+          "gap_test_minus_ood": -0.0893
+        },
+        "genc": {
+          "f1": 0.2787,
+          "retention": 0.819,
+          "retention_ci95": [
+            0.369,
+            2.163
+          ],
+          "gap_test_minus_ood": 0.0616
+        },
+        "genf": {
+          "f1": 0.2902,
+          "retention": 0.853,
+          "retention_ci95": [
+            0.425,
+            1.6
+          ],
+          "gap_test_minus_ood": 0.0501
+        },
+        "ood_mean": {
+          "f1": 0.3328,
+          "retention": 0.978,
+          "retention_ci95": [
+            0.721,
+            1.48
+          ],
+          "gap_test_minus_ood": 0.0075,
+          "gap_ci95": [
+            -0.1596,
+            0.1041
+          ]
+        }
+      },
+      "rnafold_mfe": {
+        "test": 0.3085,
+        "gena": {
+          "f1": 0.4172,
+          "retention": 1.352,
+          "retention_ci95": [
+            1.037,
+            1.637
+          ],
+          "gap_test_minus_ood": -0.1087
+        },
+        "genc": {
+          "f1": 0.2827,
+          "retention": 0.917,
+          "retention_ci95": [
+            0.407,
+            2.356
+          ],
+          "gap_test_minus_ood": 0.0257
+        },
+        "genf": {
+          "f1": 0.2665,
+          "retention": 0.864,
+          "retention_ci95": [
+            0.424,
+            1.722
+          ],
+          "gap_test_minus_ood": 0.0419
+        },
+        "ood_mean": {
+          "f1": 0.3222,
+          "retention": 1.044,
+          "retention_ci95": [
+            0.747,
+            1.605
+          ],
+          "gap_test_minus_ood": -0.0137,
+          "gap_ci95": [
+            -0.1788,
+            0.087
+          ]
+        }
+      }
+    }
+  },
+  "interaction": {
+    "LM": {
+      "macro": {
+        "gena": {
+          "delta_test": 0.1825,
+          "delta_ood": 0.0932,
+          "interaction": 0.0894,
+          "ci95": [
+            -0.0377,
+            0.2069
+          ],
+          "p": 0.177
+        },
+        "genc": {
+          "delta_test": 0.1825,
+          "delta_ood": 0.0167,
+          "interaction": 0.1658,
+          "ci95": [
+            0.0727,
+            0.2448
+          ],
+          "p": 0.0005
+        },
+        "genf": {
+          "delta_test": 0.1825,
+          "delta_ood": 0.0207,
+          "interaction": 0.1618,
+          "ci95": [
+            0.0672,
+            0.2289
+          ],
+          "p": 0.0005
+        },
+        "ood_mean": {
+          "delta_test": 0.1825,
+          "delta_ood": 0.0435,
+          "interaction": 0.139,
+          "ci95": [
+            0.0433,
+            0.2133
+          ],
+          "p": 0.0025
+        }
+      },
+      "micro": {
+        "gena": {
+          "delta_test": 0.1822,
+          "delta_ood": 0.0896,
+          "interaction": 0.0926,
+          "ci95": [
+            -0.0244,
+            0.2003
+          ],
+          "p": 0.1255
+        },
+        "genc": {
+          "delta_test": 0.1822,
+          "delta_ood": 0.0425,
+          "interaction": 0.1397,
+          "ci95": [
+            0.0579,
+            0.2416
+          ],
+          "p": 0.0005
+        },
+        "genf": {
+          "delta_test": 0.1822,
+          "delta_ood": 0.0456,
+          "interaction": 0.1366,
+          "ci95": [
+            0.0494,
+            0.2144
+          ],
+          "p": 0.0005
+        },
+        "ood_mean": {
+          "delta_test": 0.1822,
+          "delta_ood": 0.0592,
+          "interaction": 0.123,
+          "ci95": [
+            0.0393,
+            0.2015
+          ],
+          "p": 0.004
+        }
+      }
+    },
+    "pretrain": {
+      "macro": {
+        "gena": {
+          "delta_test": 0.2103,
+          "delta_ood": 0.1053,
+          "interaction": 0.105,
+          "ci95": [
+            -0.0344,
+            0.2282
+          ],
+          "p": 0.1545
+        },
+        "genc": {
+          "delta_test": 0.2103,
+          "delta_ood": 0.0319,
+          "interaction": 0.1785,
+          "ci95": [
+            0.0733,
+            0.272
+          ],
+          "p": 0.0005
+        },
+        "genf": {
+          "delta_test": 0.2103,
+          "delta_ood": 0.0243,
+          "interaction": 0.1861,
+          "ci95": [
+            0.0762,
+            0.265
+          ],
+          "p": 0.0005
+        },
+        "ood_mean": {
+          "delta_test": 0.2103,
+          "delta_ood": 0.0538,
+          "interaction": 0.1565,
+          "ci95": [
+            0.0473,
+            0.2442
+          ],
+          "p": 0.002
+        }
+      },
+      "micro": {
+        "gena": {
+          "delta_test": 0.2051,
+          "delta_ood": 0.1038,
+          "interaction": 0.1013,
+          "ci95": [
+            -0.0261,
+            0.2168
+          ],
+          "p": 0.1315
+        },
+        "genc": {
+          "delta_test": 0.2051,
+          "delta_ood": 0.055,
+          "interaction": 0.1501,
+          "ci95": [
+            0.0621,
+            0.2612
+          ],
+          "p": 0.0005
+        },
+        "genf": {
+          "delta_test": 0.2051,
+          "delta_ood": 0.0415,
+          "interaction": 0.1636,
+          "ci95": [
+            0.0639,
+            0.2468
+          ],
+          "p": 0.0005
+        },
+        "ood_mean": {
+          "delta_test": 0.2051,
+          "delta_ood": 0.0668,
+          "interaction": 0.1383,
+          "ci95": [
+            0.045,
+            0.2263
+          ],
+          "p": 0.003
+        }
+      }
+    },
+    "randfeat": {
+      "macro": {
+        "gena": {
+          "delta_test": -0.0278,
+          "delta_ood": -0.0121,
+          "interaction": -0.0157,
+          "ci95": [
+            -0.0333,
+            0.003
+          ],
+          "p": 0.144
+        },
+        "genc": {
+          "delta_test": -0.0278,
+          "delta_ood": -0.0152,
+          "interaction": -0.0126,
+          "ci95": [
+            -0.0374,
+            0.0119
+          ],
+          "p": 0.4149
+        },
+        "genf": {
+          "delta_test": -0.0278,
+          "delta_ood": -0.0035,
+          "interaction": -0.0242,
+          "ci95": [
+            -0.0429,
+            -0.0015
+          ],
+          "p": 0.0345
+        },
+        "ood_mean": {
+          "delta_test": -0.0278,
+          "delta_ood": -0.0103,
+          "interaction": -0.0175,
+          "ci95": [
+            -0.0365,
+            0.0015
+          ],
+          "p": 0.089
+        }
+      },
+      "micro": {
+        "gena": {
+          "delta_test": -0.0229,
+          "delta_ood": -0.0142,
+          "interaction": -0.0087,
+          "ci95": [
+            -0.0257,
+            0.0058
+          ],
+          "p": 0.3579
+        },
+        "genc": {
+          "delta_test": -0.0229,
+          "delta_ood": -0.0126,
+          "interaction": -0.0104,
+          "ci95": [
+            -0.0351,
+            0.0139
+          ],
+          "p": 0.5119
+        },
+        "genf": {
+          "delta_test": -0.0229,
+          "delta_ood": 0.0041,
+          "interaction": -0.027,
+          "ci95": [
+            -0.0421,
+            -0.0063
+          ],
+          "p": 0.0035
+        },
+        "ood_mean": {
+          "delta_test": -0.0229,
+          "delta_ood": -0.0076,
+          "interaction": -0.0154,
+          "ci95": [
+            -0.0323,
+            0.0002
+          ],
+          "p": 0.0555
+        }
+      }
+    }
+  },
+  "interaction_LM": {
+    "macro": {
+      "gena": {
+        "delta_test": 0.1825,
+        "delta_ood": 0.0932,
+        "interaction": 0.0894,
+        "ci95": [
+          -0.0377,
+          0.2069
+        ],
+        "p": 0.177
+      },
+      "genc": {
+        "delta_test": 0.1825,
+        "delta_ood": 0.0167,
+        "interaction": 0.1658,
+        "ci95": [
+          0.0727,
+          0.2448
+        ],
+        "p": 0.0005
+      },
+      "genf": {
+        "delta_test": 0.1825,
+        "delta_ood": 0.0207,
+        "interaction": 0.1618,
+        "ci95": [
+          0.0672,
+          0.2289
+        ],
+        "p": 0.0005
+      },
+      "ood_mean": {
+        "delta_test": 0.1825,
+        "delta_ood": 0.0435,
+        "interaction": 0.139,
+        "ci95": [
+          0.0433,
+          0.2133
+        ],
+        "p": 0.0025
+      }
+    },
+    "micro": {
+      "gena": {
+        "delta_test": 0.1822,
+        "delta_ood": 0.0896,
+        "interaction": 0.0926,
+        "ci95": [
+          -0.0244,
+          0.2003
+        ],
+        "p": 0.1255
+      },
+      "genc": {
+        "delta_test": 0.1822,
+        "delta_ood": 0.0425,
+        "interaction": 0.1397,
+        "ci95": [
+          0.0579,
+          0.2416
+        ],
+        "p": 0.0005
+      },
+      "genf": {
+        "delta_test": 0.1822,
+        "delta_ood": 0.0456,
+        "interaction": 0.1366,
+        "ci95": [
+          0.0494,
+          0.2144
+        ],
+        "p": 0.0005
+      },
+      "ood_mean": {
+        "delta_test": 0.1822,
+        "delta_ood": 0.0592,
+        "interaction": 0.123,
+        "ci95": [
+          0.0393,
+          0.2015
+        ],
+        "p": 0.004
+      }
+    }
+  },
+  "literature": {
+    "lenmatched": {
+      "RNAfold": {
+        "test": 0.32,
+        "gena": 0.4193,
+        "genc": 0.28,
+        "genf": 0.28
+      },
+      "RiNALMo-giga-U-Net (FM، fine-tune کامل)": {
+        "test": 0.7832,
+        "gena": 0.3565,
+        "genc": 0.1525,
+        "genf": 0.2298
+      },
+      "BPfold (DL)": {
+        "test": 0.45,
+        "gena": 0.5687,
+        "genc": 0.4,
+        "genf": 0.28
+      },
+      "EternaFold (SD)": {
+        "test": 0.33,
+        "gena": 0.4608,
+        "genc": 0.29,
+        "genf": 0.29
+      }
+    },
+    "fullsplit": {
+      "RNAfold": {
+        "test": 0.3013,
+        "ood": 0.2886
+      },
+      "RiNALMo-giga-U-Net": {
+        "test": 0.7579,
+        "gena": 0.2509,
+        "genc": 0.1651,
+        "genf": 0.226,
+        "ood": 0.214
+      },
+      "BPfold": {
+        "test": 0.4065,
+        "ood": 0.3608
+      },
+      "EternaFold": {
+        "test": 0.3189,
+        "ood": 0.3064
+      }
+    },
+    "ours": [
+      {
+        "metric": "macro",
+        "arm": "unet+phys",
+        "test": 0.5459348434168988,
+        "gena": 0.5328516669741554,
+        "genc": 0.3022420924255244,
+        "genf": 0.30911352570762823
+      },
+      {
+        "metric": "macro",
+        "arm": "unet",
+        "test": 0.5519682535258216,
+        "gena": 0.5017583945786089,
+        "genc": 0.2742150859826575,
+        "genf": 0.31735080792277054
+      },
+      {
+        "metric": "macro",
+        "arm": "nolm+phys",
+        "test": 0.3634055867803754,
+        "gena": 0.4396738867243533,
+        "genc": 0.28556126243195473,
+        "genf": 0.28838986603398914
+      },
+      {
+        "metric": "macro",
+        "arm": "randlm+phys",
+        "test": 0.3356178245645152,
+        "gena": 0.42755118847213275,
+        "genc": 0.2703847172447793,
+        "genf": 0.28485010309682884
+      },
+      {
+        "metric": "macro",
+        "arm": "rnafold_mfe",
+        "test": 0.31879597303006346,
+        "gena": 0.42671488381547545,
+        "genc": 0.279339075151746,
+        "genf": 0.280237440933739
+      },
+      {
+        "metric": "micro",
+        "arm": "unet+phys",
+        "test": 0.5454458142867361,
+        "gena": 0.5334008126072022,
+        "genc": 0.33374114398422217,
+        "genf": 0.331697207886029
+      },
+      {
+        "metric": "micro",
+        "arm": "unet",
+        "test": 0.5518167292976902,
+        "gena": 0.5014888993812491,
+        "genc": 0.2965879243823182,
+        "genf": 0.3404069654817221
+      },
+      {
+        "metric": "micro",
+        "arm": "nolm+phys",
+        "test": 0.36324144666789354,
+        "gena": 0.4438053178180832,
+        "genc": 0.2912775336312985,
+        "genf": 0.2861015316806925
+      },
+      {
+        "metric": "micro",
+        "arm": "randlm+phys",
+        "test": 0.3403000203108611,
+        "gena": 0.4295853379591086,
+        "genc": 0.2786950225708061,
+        "genf": 0.290158566159244
+      },
+      {
+        "metric": "micro",
+        "arm": "rnafold_mfe",
+        "test": 0.3084768879532719,
+        "gena": 0.41718897108271685,
+        "genc": 0.28273023284389015,
+        "genf": 0.26653995836727307
+      }
+    ],
+    "caveats": "اعداد Test/GenC/GenF منتشرشده از heatmap با ۲ رقم اعشارند؛ منتشرشده روی splitهای کامل و ما روی زیرمجموعهٔ cap؛ تجمیع رسمی (per-sequence یا micro) را در مقاله تأیید کنید — هر دو گزارش می‌شود."
+  },
+  "rnafold_anchor": {
+    "macro": {
+      "test": -0.001,
+      "gena": 0.007,
+      "genc": -0.001,
+      "genf": 0.0
+    },
+    "micro": {
+      "test": -0.012,
+      "gena": -0.002,
+      "genc": 0.003,
+      "genf": -0.013
+    }
+  },
+  "repro_flags": {
+    "fm_id_f1_macro": 0.5459,
+    "fm_id_reaches_0.60": false,
+    "fm_retention": 0.699,
+    "fm_retention_below_0.5": false
+  }
+}

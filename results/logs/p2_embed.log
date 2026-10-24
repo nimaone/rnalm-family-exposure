@@ -1,0 +1,10 @@
+### p2_embed START | device=cuda
+backbone: multimolecule/rinalmo-giga | dim=1280 | params=651M
+  train: موجود و معتبر — skip
+  val: موجود و معتبر — skip
+  test: موجود و معتبر — skip
+  gena: موجود و معتبر — skip
+  genc: موجود و معتبر — skip
+  genf: موجود و معتبر — skip
+GATE: PASS | embeddings کامل | multimolecule/rinalmo-giga dim=1280
+### p2_embed DONE

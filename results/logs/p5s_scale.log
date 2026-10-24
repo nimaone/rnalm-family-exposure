@@ -1,0 +1,102 @@
+### p5s_scale START | sizes=[1500, 3000, 6000] seeds=[0, 1] epochs=3
+--- N=1500 | family در زیرمجموعه: 939 | میانگین طول 108
+    unet+phys N=1500 s0 update 1/4500 loss=0.8132
+      eval test: f1=0.4613 (oracle 0.4659, one-pair 0.4641)
+      eval gena: f1=0.5197 (oracle 0.5205, one-pair 0.5272)
+      eval genc: f1=0.2980 (oracle 0.3011, one-pair 0.2964)
+      eval genf: f1=0.3034 (oracle 0.3041, one-pair 0.3027)
+[unet+phys N=1500 s0] val=0.4782 thr=0.5 Test=0.4613 OOD=0.3737 | 139s
+    unet+phys N=1500 s1 update 1/4500 loss=0.6894
+      eval test: f1=0.4599 (oracle 0.4607, one-pair 0.4651)
+      eval gena: f1=0.5022 (oracle 0.5108, one-pair 0.5144)
+      eval genc: f1=0.2926 (oracle 0.2926, one-pair 0.2968)
+      eval genf: f1=0.3013 (oracle 0.3049, one-pair 0.3026)
+[unet+phys N=1500 s1] val=0.4752 thr=0.65 Test=0.4599 OOD=0.3654 | 258s
+    nolm+phys N=1500 s0 update 1/4500 loss=0.7420
+      eval test: f1=0.3259 (oracle 0.3279, one-pair 0.3257)
+      eval gena: f1=0.4377 (oracle 0.4414, one-pair 0.4375)
+      eval genc: f1=0.2869 (oracle 0.2923, one-pair 0.2866)
+      eval genf: f1=0.2879 (oracle 0.2879, one-pair 0.2881)
+[nolm+phys N=1500 s0] val=0.3673 thr=0.7 Test=0.3259 OOD=0.3375 | 371s
+    nolm+phys N=1500 s1 update 1/4500 loss=0.7659
+      eval test: f1=0.3228 (oracle 0.3243, one-pair 0.3227)
+      eval gena: f1=0.4405 (oracle 0.4419, one-pair 0.4397)
+      eval genc: f1=0.2902 (oracle 0.2927, one-pair 0.2896)
+      eval genf: f1=0.2833 (oracle 0.2835, one-pair 0.2840)
+[nolm+phys N=1500 s1] val=0.3613 thr=0.8 Test=0.3228 OOD=0.338 | 486s
+--- N=3000 | family در زیرمجموعه: 1619 | میانگین طول 108
+    unet+phys N=3000 s0 update 1/9000 loss=0.8218
+    unet+phys N=3000 s0 update 5000/9000 loss=0.0103
+      eval test: f1=0.4985 (oracle 0.4991, one-pair 0.5064)
+      eval gena: f1=0.5158 (oracle 0.5200, one-pair 0.5290)
+      eval genc: f1=0.3166 (oracle 0.3168, one-pair 0.3159)
+      eval genf: f1=0.3225 (oracle 0.3243, one-pair 0.3213)
+[unet+phys N=3000 s0] val=0.5054 thr=0.45 Test=0.4985 OOD=0.385 | 675s
+    unet+phys N=3000 s1 update 1/9000 loss=0.6617
+    unet+phys N=3000 s1 update 5000/9000 loss=0.0304
+      eval test: f1=0.4708 (oracle 0.4758, one-pair 0.4703)
+      eval gena: f1=0.5026 (oracle 0.5038, one-pair 0.5112)
+      eval genc: f1=0.3081 (oracle 0.3084, one-pair 0.3110)
+      eval genf: f1=0.3020 (oracle 0.3040, one-pair 0.3022)
+[unet+phys N=3000 s1] val=0.4904 thr=0.75 Test=0.4708 OOD=0.3709 | 857s
+    nolm+phys N=3000 s0 update 1/9000 loss=0.7270
+    nolm+phys N=3000 s0 update 5000/9000 loss=0.0193
+      eval test: f1=0.3328 (oracle 0.3331, one-pair 0.3323)
+      eval gena: f1=0.4372 (oracle 0.4390, one-pair 0.4374)
+      eval genc: f1=0.2888 (oracle 0.2897, one-pair 0.2889)
+      eval genf: f1=0.2787 (oracle 0.2848, one-pair 0.2818)
+[nolm+phys N=3000 s0] val=0.3745 thr=0.5 Test=0.3328 OOD=0.3349 | 1032s
+    nolm+phys N=3000 s1 update 1/9000 loss=0.7231
+    nolm+phys N=3000 s1 update 5000/9000 loss=0.0546
+      eval test: f1=0.3287 (oracle 0.3303, one-pair 0.3286)
+      eval gena: f1=0.4425 (oracle 0.4463, one-pair 0.4415)
+      eval genc: f1=0.2903 (oracle 0.2967, one-pair 0.2896)
+      eval genf: f1=0.2883 (oracle 0.2880, one-pair 0.2886)
+[nolm+phys N=3000 s1] val=0.3677 thr=0.8 Test=0.3287 OOD=0.3404 | 1206s
+--- N=6000 | family در زیرمجموعه: 2547 | میانگین طول 107
+    unet+phys N=6000 s0 update 1/18000 loss=0.8570
+    unet+phys N=6000 s0 update 5000/18000 loss=0.0454
+    unet+phys N=6000 s0 update 10000/18000 loss=0.0425
+    unet+phys N=6000 s0 update 15000/18000 loss=0.0622
+      eval test: f1=0.5272 (oracle 0.5275, one-pair 0.5317)
+      eval gena: f1=0.5552 (oracle 0.5561, one-pair 0.5614)
+      eval genc: f1=0.3092 (oracle 0.3174, one-pair 0.3093)
+      eval genf: f1=0.3352 (oracle 0.3357, one-pair 0.3317)
+[unet+phys N=6000 s0] val=0.538 thr=0.7 Test=0.5272 OOD=0.3999 | 1521s
+    unet+phys N=6000 s1 update 1/18000 loss=0.6576
+    unet+phys N=6000 s1 update 5000/18000 loss=0.1680
+    unet+phys N=6000 s1 update 10000/18000 loss=0.1415
+    unet+phys N=6000 s1 update 15000/18000 loss=0.1455
+      eval test: f1=0.5054 (oracle 0.5067, one-pair 0.5106)
+      eval gena: f1=0.5282 (oracle 0.5344, one-pair 0.5417)
+      eval genc: f1=0.3092 (oracle 0.3091, one-pair 0.3104)
+      eval genf: f1=0.3063 (oracle 0.3087, one-pair 0.3088)
+[unet+phys N=6000 s1] val=0.5146 thr=0.65 Test=0.5054 OOD=0.3812 | 1830s
+    nolm+phys N=6000 s0 update 1/18000 loss=0.7388
+    nolm+phys N=6000 s0 update 5000/18000 loss=0.0542
+    nolm+phys N=6000 s0 update 10000/18000 loss=0.0606
+    nolm+phys N=6000 s0 update 15000/18000 loss=0.0935
+      eval test: f1=0.3356 (oracle 0.3388, one-pair 0.3355)
+      eval gena: f1=0.4377 (oracle 0.4430, one-pair 0.4373)
+      eval genc: f1=0.2841 (oracle 0.2945, one-pair 0.2834)
+      eval genf: f1=0.2902 (oracle 0.2922, one-pair 0.2904)
+[nolm+phys N=6000 s0] val=0.381 thr=0.7 Test=0.3356 OOD=0.3373 | 2131s
+    nolm+phys N=6000 s1 update 1/18000 loss=0.7235
+    nolm+phys N=6000 s1 update 5000/18000 loss=0.1611
+    nolm+phys N=6000 s1 update 10000/18000 loss=0.1397
+    nolm+phys N=6000 s1 update 15000/18000 loss=0.1349
+      eval test: f1=0.3446 (oracle 0.3449, one-pair 0.3399)
+      eval gena: f1=0.4375 (oracle 0.4387, one-pair 0.4385)
+      eval genc: f1=0.2903 (oracle 0.2904, one-pair 0.2920)
+      eval genf: f1=0.2805 (oracle 0.2862, one-pair 0.2819)
+[nolm+phys N=6000 s1] val=0.3854 thr=0.65 Test=0.3446 OOD=0.3361 | 2425s
+
+N | arm | Test | OOD (میانگین seedها)
+  1500 | unet+phys  | 0.461 | 0.370 (2 seed)
+  1500 | nolm+phys  | 0.324 | 0.338 (2 seed)
+  3000 | unet+phys  | 0.485 | 0.378 (2 seed)
+  3000 | nolm+phys  | 0.331 | 0.338 (2 seed)
+  6000 | unet+phys  | 0.516 | 0.391 (2 seed)
+  6000 | nolm+phys  | 0.340 | 0.337 (2 seed)
+GATE: PASS | منحنی مقیاس ذخیره شد (تفسیر در P10)
+### p5s_scale DONE

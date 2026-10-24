@@ -1,0 +1,80 @@
+### p5r_randlm START | seeds=[0, 1, 2] epochs=3
+[randlm+phys s0] params=583K | شروع آموزش
+    randlm+phys s0 update 1/36000 loss=0.7983
+    randlm+phys s0 update 2000/36000 loss=0.0743
+    randlm+phys s0 update 4000/36000 loss=0.0201
+    randlm+phys s0 update 6000/36000 loss=0.2817
+    randlm+phys s0 update 8000/36000 loss=0.0318
+    randlm+phys s0 update 10000/36000 loss=0.0493
+    randlm+phys s0 update 12000/36000 loss=0.0344
+    randlm+phys s0 update 14000/36000 loss=0.1011
+    randlm+phys s0 update 16000/36000 loss=0.4322
+    randlm+phys s0 update 18000/36000 loss=0.0847
+    randlm+phys s0 update 20000/36000 loss=0.0223
+    randlm+phys s0 update 22000/36000 loss=0.0226
+    randlm+phys s0 update 24000/36000 loss=0.0346
+    randlm+phys s0 update 26000/36000 loss=0.0516
+    randlm+phys s0 update 28000/36000 loss=0.0189
+    randlm+phys s0 update 30000/36000 loss=0.0301
+    randlm+phys s0 update 32000/36000 loss=0.0582
+    randlm+phys s0 update 34000/36000 loss=0.0631
+    randlm+phys s0 update 36000/36000 loss=0.0239
+      eval test: f1=0.3416 (oracle 0.3422, one-pair 0.3396)
+      eval gena: f1=0.4341 (oracle 0.4358, one-pair 0.4348)
+      eval genc: f1=0.2846 (oracle 0.2891, one-pair 0.2840)
+      eval genf: f1=0.2878 (oracle 0.2887, one-pair 0.2884)
+[randlm+phys s0] val=0.3819 thr=0.65 OOD=0.3355 Test=0.3416 GenC=0.2846 | 1105s
+[randlm+phys s1] params=583K | شروع آموزش
+    randlm+phys s1 update 1/36000 loss=0.7201
+    randlm+phys s1 update 2000/36000 loss=0.1351
+    randlm+phys s1 update 4000/36000 loss=0.0748
+    randlm+phys s1 update 6000/36000 loss=0.1556
+    randlm+phys s1 update 8000/36000 loss=0.0188
+    randlm+phys s1 update 10000/36000 loss=0.0117
+    randlm+phys s1 update 12000/36000 loss=0.1034
+    randlm+phys s1 update 14000/36000 loss=0.0526
+    randlm+phys s1 update 16000/36000 loss=0.0174
+    randlm+phys s1 update 18000/36000 loss=0.0293
+    randlm+phys s1 update 20000/36000 loss=0.0191
+    randlm+phys s1 update 22000/36000 loss=0.1365
+    randlm+phys s1 update 24000/36000 loss=0.0313
+    randlm+phys s1 update 26000/36000 loss=0.0241
+    randlm+phys s1 update 28000/36000 loss=0.0550
+    randlm+phys s1 update 30000/36000 loss=0.0520
+    randlm+phys s1 update 32000/36000 loss=0.0489
+    randlm+phys s1 update 34000/36000 loss=0.1294
+    randlm+phys s1 update 36000/36000 loss=0.0380
+      eval test: f1=0.3375 (oracle 0.3389, one-pair 0.3345)
+      eval gena: f1=0.4266 (oracle 0.4267, one-pair 0.4286)
+      eval genc: f1=0.2725 (oracle 0.2769, one-pair 0.2732)
+      eval genf: f1=0.2967 (oracle 0.3072, one-pair 0.2966)
+[randlm+phys s1] val=0.3794 thr=0.55 OOD=0.3319 Test=0.3375 GenC=0.2725 | 1946s
+[randlm+phys s2] params=583K | شروع آموزش
+    randlm+phys s2 update 1/36000 loss=0.6645
+    randlm+phys s2 update 2000/36000 loss=0.0487
+    randlm+phys s2 update 4000/36000 loss=0.0233
+    randlm+phys s2 update 6000/36000 loss=0.1422
+    randlm+phys s2 update 8000/36000 loss=0.0947
+    randlm+phys s2 update 10000/36000 loss=0.0303
+    randlm+phys s2 update 12000/36000 loss=0.0843
+    randlm+phys s2 update 14000/36000 loss=0.1185
+    randlm+phys s2 update 16000/36000 loss=0.0161
+    randlm+phys s2 update 18000/36000 loss=0.0218
+    randlm+phys s2 update 20000/36000 loss=0.1134
+    randlm+phys s2 update 22000/36000 loss=0.0336
+    randlm+phys s2 update 24000/36000 loss=0.0318
+    randlm+phys s2 update 26000/36000 loss=0.0569
+    randlm+phys s2 update 28000/36000 loss=0.0832
+    randlm+phys s2 update 30000/36000 loss=0.0346
+    randlm+phys s2 update 32000/36000 loss=0.0531
+    randlm+phys s2 update 34000/36000 loss=0.0151
+    randlm+phys s2 update 36000/36000 loss=0.1384
+      eval test: f1=0.3417 (oracle 0.3423, one-pair 0.3409)
+      eval gena: f1=0.4281 (oracle 0.4302, one-pair 0.4289)
+      eval genc: f1=0.2790 (oracle 0.2835, one-pair 0.2785)
+      eval genf: f1=0.2860 (oracle 0.2864, one-pair 0.2862)
+[randlm+phys s2] val=0.3826 thr=0.65 OOD=0.331 Test=0.3417 GenC=0.279 | 2684s
+GATE: PASS | randlm+phys: 3/3 seed کامل
+
+randlm+phys | Test 0.340 | GenA 0.430 | GenC 0.279 | GenF 0.290 | OOD 0.333
+### p5r_randlm DONE

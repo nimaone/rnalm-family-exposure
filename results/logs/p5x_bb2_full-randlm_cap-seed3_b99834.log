@@ -1,0 +1,18 @@
+### p5x_extra START | jobs=['bb2_full', 'randlm_cap', 'seed3'] seeds=[0, 1] seeds3=[0, 1, 2] epochs=2
+N_cap: {10: 8924} | کل runها=13 | باقی‌مانده=10 | برآورد زمان ≈ 61 دقیقه (۰٫۰۱۶۵ s/update + ۷۰ s eval؛ تخمین)
+
+Traceback (most recent call last):
+  File "/content/rna_plib/drive.py", line 264, in stage
+    yield
+  File "/tmp/ipykernel_38418/3274750951.py", line 132, in <cell line: 0>
+    SP = splits_of("rinalmo" if arm == "nolm+phys" else bb)
+  File "/tmp/ipykernel_38418/3274750951.py", line 55, in splits_of
+    if bb not in SPL: SPL[bb] = {n: P.Split(n, emb_dir=EMBD[bb]) for n in P.SPLITS}
+                                    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/content/rna_plib/plib.py", line 110, in __init__
+    self.emb = np.load(AR / emb_dir / f"{name}.npy", mmap_mode="r")
+               ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/numpy/lib/_npyio_impl.py", line 459, in load
+    fid = stack.enter_context(open(os.fspath(file), "rb"))
+                              ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/content/rna_paper_v4/emb_rand/train.npy'

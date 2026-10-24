@@ -1,0 +1,36 @@
+### p7_analysis START | n_boot=2000
+GATE: PASS | خروجی P1b موجود است (leakage.json, leak_masks.npz)
+GATE: PASS | test: طول برچسب واحد/ماسک با split یکی است
+GATE: PASS | gena: طول برچسب واحد/ماسک با split یکی است
+GATE: PASS | genc: طول برچسب واحد/ماسک با split یکی است
+GATE: PASS | genf: طول برچسب واحد/ماسک با split یکی است
+واحد بازنمونه: {'test': {'unit': 'family', 'n_units': 224, 'n_families': 224}, 'gena': {'unit': 'super_family', 'n_units': 99, 'n_families': 102}, 'genc': {'unit': 'clan', 'n_units': 11, 'n_families': 28}, 'genf': {'unit': 'clan', 'n_units': 10, 'n_families': 10}}
+سامانه‌ها (تعداد seed): {'unet+phys': 3, 'unet': 3, 'nolm+phys': 3, 'rnafold_mfe': 1, 'rnafold_bpp': 1, 'frozen_matched': 3, 'lora_matched': 3, 'adapter_matched': 3}
+
+--- واحد اصلی (واحد تعریف‌کنندهٔ split)  (* = CI>0 ، † = CI<0 ، ‡ = کمتر از ۵ واحد بازنمونه ⇒ CI معتبر نیست؛ OOD با CI تصحیح‌شدهٔ Bonferroni×3، Test با CI95) ---
+مدل اصلی − RNAfold-MFE: test:+0.237* gena:+0.116* genc:+0.051 genf:+0.065 | OOD-mean(توصیفی) +0.077 [+0.032,+0.099]
+مدل اصلی − RNAfold-bpp(thr val): test:+0.222* gena:+0.094 genc:+0.051 genf:+0.056 | OOD-mean(توصیفی) +0.067 [+0.019,+0.093]
+بدون LM − RNAfold-MFE: test:+0.055* gena:+0.027* genc:+0.009 genf:+0.020 | OOD-mean(توصیفی) +0.018 [+0.010,+0.028]
+سهم LM (با − بدون): test:+0.182* gena:+0.090 genc:+0.043 genf:+0.046 | OOD-mean(توصیفی) +0.059 [+0.012,+0.081]
+سهم فیزیک (با − بدون): test:-0.006 gena:+0.032* genc:+0.037 genf:-0.009 | OOD-mean(توصیفی) +0.020 [+0.001,+0.037]
+LoRA − frozen (matched): test:+0.050* gena:+0.018 genc:+0.007 genf:+0.015 | OOD-mean(توصیفی) +0.013 [+0.004,+0.018]
+adapter هم‌پارامتر − frozen: test:+0.011* gena:-0.001 genc:-0.002 genf:+0.005 | OOD-mean(توصیفی) +0.001 [-0.002,+0.004]
+LoRA − adapter هم‌پارامتر (کنترل ظرفیت): test:+0.039* gena:+0.019* genc:+0.009 genf:+0.010 | OOD-mean(توصیفی) +0.013 [+0.004,+0.017]
+
+--- حساسیت: واحد family (v2)  (* = CI>0 ، † = CI<0 ، ‡ = کمتر از ۵ واحد بازنمونه ⇒ CI معتبر نیست؛ OOD با CI تصحیح‌شدهٔ Bonferroni×3، Test با CI95) ---
+مدل اصلی − RNAfold-MFE: test:+0.237* gena:+0.116* genc:+0.051* genf:+0.065 | OOD-mean(توصیفی) +0.077 [+0.038,+0.098]
+مدل اصلی − RNAfold-bpp(thr val): test:+0.222* gena:+0.094 genc:+0.051 genf:+0.056 | OOD-mean(توصیفی) +0.067 [+0.021,+0.091]
+بدون LM − RNAfold-MFE: test:+0.055* gena:+0.027* genc:+0.009 genf:+0.020 | OOD-mean(توصیفی) +0.018 [+0.010,+0.030]
+سهم LM (با − بدون): test:+0.182* gena:+0.090 genc:+0.043 genf:+0.046 | OOD-mean(توصیفی) +0.059 [+0.015,+0.081]
+سهم فیزیک (با − بدون): test:-0.006 gena:+0.032* genc:+0.037 genf:-0.009 | OOD-mean(توصیفی) +0.020 [+0.007,+0.043]
+LoRA − frozen (matched): test:+0.050* gena:+0.018 genc:+0.007 genf:+0.015 | OOD-mean(توصیفی) +0.013 [+0.004,+0.018]
+adapter هم‌پارامتر − frozen: test:+0.011* gena:-0.001 genc:-0.002 genf:+0.005 | OOD-mean(توصیفی) +0.001 [-0.002,+0.003]
+LoRA − adapter هم‌پارامتر (کنترل ظرفیت): test:+0.039* gena:+0.019* genc:+0.009 genf:+0.010 | OOD-mean(توصیفی) +0.013 [+0.004,+0.018]
+
+(توالی یکسانی با train نیست → تحلیل حساسیت حذف duplicate لازم نیست)
+similarity test (n=1000, واحد=family×224): ρ_ctrl مدل=-0.031 RNAfold=-0.09 Δρ=0.058 CI=[-0.028, 0.104] | F1 چارک مدل=[0.57, 0.542, 0.554, 0.519] RNAfold=[0.394, 0.3, 0.289, 0.292]
+similarity gena (n=973, واحد=super_family×80): ρ_ctrl مدل=0.001 RNAfold=-0.074 Δρ=0.075 CI=[-0.007, 0.132] | F1 چارک مدل=[0.534, 0.559, 0.531, 0.505] RNAfold=[0.448, 0.472, 0.432, 0.355]
+similarity genc (n=1000, واحد=clan×11): ρ_ctrl مدل=-0.278 RNAfold=-0.249 Δρ=-0.029 CI=[-0.047, 0.026] | F1 چارک مدل=[0.457, 0.382, 0.208, 0.164] RNAfold=[0.439, 0.359, 0.193, 0.127]
+similarity genf (n=800, واحد=clan×10): ρ_ctrl مدل=0.008 RNAfold=0.003 Δρ=0.004 CI=[-0.023, 0.08] | F1 چارک مدل=[0.442, 0.346, 0.195, 0.258] RNAfold=[0.423, 0.318, 0.167, 0.213]
+GATE: PASS | 8 مقایسهٔ جفت‌شده (واحد اصلی) + حساسیت family
+### p7_analysis DONE

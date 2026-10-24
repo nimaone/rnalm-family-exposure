@@ -1,0 +1,14 @@
+### p0_env START | quick=False
+GATE: PASS | GPU: Tesla T4
+GATE: PASS | HF_TOKEN تنظیم است (CHANRG گیت‌شده است)
+GATE: PASS | ViennaRNA 2.7.2
+{
+  "gpu": "Tesla T4",
+  "vram_gb": 15.6,
+  "disk_free_gb": 75.4,
+  "torch": "2.11.0+cu130",
+  "quick": false,
+  "fake_backbone": false
+}
+GATE: PASS | دیسک آزاد 75GB (نیاز T4-config: حدود ۱۵GB)
+### p0_env DONE

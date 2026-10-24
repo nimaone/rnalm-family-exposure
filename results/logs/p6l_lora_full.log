@@ -1,0 +1,26 @@
+### p6l_lora_full START | seeds=[0] epochs=2 (n_seq=EPOCHS×train، accum=1 — همان پروتکل P5) device=cuda
+GATE: PASS | لایه‌های شماره‌دار پیدا شد
+GATE: PASS | 8 ماژول LoRA در لایه‌های 29..32
+  adapter: 163.8K پارامتر
+GATE: PASS | هم‌ارزی اولیهٔ LoRA با کش: max rel diff=0.0025
+    lora_full s0 update 1/24000 loss=0.7796 |g_lora|=3.75e-02
+    lora_full s0 update 2000/24000 loss=0.0543 |g_lora|=4.91e-02
+    lora_full s0 update 4000/24000 loss=0.0140 |g_lora|=3.87e-02
+    lora_full s0 update 6000/24000 loss=0.3032 |g_lora|=2.47e-01
+    lora_full s0 update 8000/24000 loss=0.0364 |g_lora|=3.98e-02
+    lora_full s0 update 10000/24000 loss=0.0295 |g_lora|=4.35e-02
+    lora_full s0 update 12000/24000 loss=0.0312 |g_lora|=3.36e-02
+    lora_full s0 update 14000/24000 loss=0.0295 |g_lora|=5.28e-02
+    lora_full s0 update 16000/24000 loss=0.4177 |g_lora|=3.22e-01
+    lora_full s0 update 18000/24000 loss=0.0258 |g_lora|=4.86e-02
+    lora_full s0 update 20000/24000 loss=0.0073 |g_lora|=3.31e-02
+    lora_full s0 update 22000/24000 loss=0.0147 |g_lora|=2.19e-02
+    lora_full s0 update 24000/24000 loss=0.0408 |g_lora|=7.76e-02
+GATE: PASS | LoRA واقعاً آموزش دید | |g| نهایی=7.76e-02 ‖B‖=24.560
+      eval test: f1=0.5684 (oracle 0.5690, one-pair 0.5728)
+      eval gena: f1=0.5544 (oracle 0.5543, one-pair 0.5692)
+      eval genc: f1=0.2657 (oracle 0.3322, one-pair 0.2649)
+      eval genf: f1=0.3431 (oracle 0.3461, one-pair 0.3428)
+[seed 0] LoRA(۱۲۰۰۰×۳): val=0.5716 thr=0.7 Test=0.5684 OOD=0.3877 | frozen(P5): Test=0.5507 OOD=0.3953 | ΔTest=+0.0177 ΔOOD=-0.0076 | 2332s
+GATE: PASS | LoRA در مقیاس کامل ذخیره شد (مقایسه با frozen در P12a: ستون «LoRA RiNALMo» در برابر «unet+phys»)
+### p6l_lora_full DONE

@@ -1,0 +1,81 @@
+### p6_lora START | seeds=[0, 1, 2] steps=1500×2 device=cuda
+    frozen s0 update 1/1500 loss=0.8460
+    frozen s0 update 500/1500 loss=0.0682
+    frozen s0 update 1000/1500 loss=0.0396
+    frozen s0 update 1500/1500 loss=0.0400
+      eval test: f1=0.4111 (oracle 0.4134, one-pair 0.4076)
+      eval gena: f1=0.4999 (oracle 0.5003, one-pair 0.5043)
+      eval genc: f1=0.2853 (oracle 0.2849, one-pair 0.2896)
+      eval genf: f1=0.2961 (oracle 0.2981, one-pair 0.2938)
+[seed 0] FROZEN: OOD=0.3604 Test=0.4111 thr=0.65 | 98s
+GATE: PASS | لایه‌های شماره‌دار پیدا شد
+GATE: PASS | 8 ماژول LoRA در لایه‌های 29..32
+  adapter: 163.8K پارامتر
+GATE: PASS | هم‌ارزی اولیهٔ LoRA با کش: max rel diff=0.0025 (کوچک = ورودی دو بازو یکسان)
+    lora s0 update 1/1500 loss=0.8490 |g_lora|=4.30e-02
+    lora s0 update 250/1500 loss=0.0422 |g_lora|=2.30e-02
+    lora s0 update 500/1500 loss=0.0608 |g_lora|=5.63e-02
+    lora s0 update 750/1500 loss=0.0392 |g_lora|=3.96e-02
+    lora s0 update 1000/1500 loss=0.0371 |g_lora|=4.48e-02
+    lora s0 update 1250/1500 loss=0.1055 |g_lora|=1.12e-01
+    lora s0 update 1500/1500 loss=0.0376 |g_lora|=2.78e-02
+GATE: PASS | LoRA واقعاً آموزش دید | |g| نهایی=2.78e-02 ‖B‖=8.717
+      eval test: f1=0.4486 (oracle 0.4539, one-pair 0.4510)
+      eval gena: f1=0.5178 (oracle 0.5177, one-pair 0.5231)
+      eval genc: f1=0.2824 (oracle 0.2882, one-pair 0.2828)
+      eval genf: f1=0.3116 (oracle 0.3115, one-pair 0.3089)
+[seed 0] LoRA: OOD=0.3706 Test=0.4486 thr=0.7 | ΔOOD=+0.0102 ΔTest=+0.0375 | 645s
+    frozen s1 update 1/1500 loss=0.6800
+    frozen s1 update 500/1500 loss=0.1061
+    frozen s1 update 1000/1500 loss=0.0685
+    frozen s1 update 1500/1500 loss=0.0532
+      eval test: f1=0.3956 (oracle 0.3957, one-pair 0.3903)
+      eval gena: f1=0.4890 (oracle 0.4889, one-pair 0.4894)
+      eval genc: f1=0.2911 (oracle 0.2913, one-pair 0.2901)
+      eval genf: f1=0.2922 (oracle 0.2963, one-pair 0.2909)
+[seed 1] FROZEN: OOD=0.3574 Test=0.3956 thr=0.55 | 743s
+GATE: PASS | لایه‌های شماره‌دار پیدا شد
+GATE: PASS | 8 ماژول LoRA در لایه‌های 29..32
+  adapter: 163.8K پارامتر
+GATE: PASS | هم‌ارزی اولیهٔ LoRA با کش: max rel diff=0.0025 (کوچک = ورودی دو بازو یکسان)
+    lora s1 update 1/1500 loss=0.6800 |g_lora|=2.80e-02
+    lora s1 update 250/1500 loss=0.0839 |g_lora|=3.35e-02
+    lora s1 update 500/1500 loss=0.0789 |g_lora|=9.84e-02
+    lora s1 update 750/1500 loss=0.1187 |g_lora|=1.21e-01
+    lora s1 update 1000/1500 loss=0.0615 |g_lora|=5.93e-02
+    lora s1 update 1250/1500 loss=0.0681 |g_lora|=6.33e-02
+    lora s1 update 1500/1500 loss=0.0465 |g_lora|=5.62e-02
+GATE: PASS | LoRA واقعاً آموزش دید | |g| نهایی=5.62e-02 ‖B‖=8.700
+      eval test: f1=0.4702 (oracle 0.4703, one-pair 0.4739)
+      eval gena: f1=0.5160 (oracle 0.5248, one-pair 0.5272)
+      eval genc: f1=0.3086 (oracle 0.3088, one-pair 0.3123)
+      eval genf: f1=0.3119 (oracle 0.3143, one-pair 0.3047)
+[seed 1] LoRA: OOD=0.3788 Test=0.4702 thr=0.7 | ΔOOD=+0.0214 ΔTest=+0.0746 | 1306s
+    frozen s2 update 1/1500 loss=0.7130
+    frozen s2 update 500/1500 loss=0.0446
+    frozen s2 update 1000/1500 loss=0.0529
+    frozen s2 update 1500/1500 loss=0.0561
+      eval test: f1=0.4369 (oracle 0.4369, one-pair 0.4290)
+      eval gena: f1=0.5092 (oracle 0.5113, one-pair 0.5087)
+      eval genc: f1=0.2956 (oracle 0.2964, one-pair 0.2978)
+      eval genf: f1=0.2942 (oracle 0.2974, one-pair 0.2908)
+[seed 2] FROZEN: OOD=0.3663 Test=0.4369 thr=0.5 | 1408s
+GATE: PASS | لایه‌های شماره‌دار پیدا شد
+GATE: PASS | 8 ماژول LoRA در لایه‌های 29..32
+  adapter: 163.8K پارامتر
+GATE: PASS | هم‌ارزی اولیهٔ LoRA با کش: max rel diff=0.0025 (کوچک = ورودی دو بازو یکسان)
+    lora s2 update 1/1500 loss=0.7111 |g_lora|=2.57e-02
+    lora s2 update 250/1500 loss=0.0649 |g_lora|=3.81e-02
+    lora s2 update 500/1500 loss=0.0395 |g_lora|=5.58e-02
+    lora s2 update 750/1500 loss=0.0514 |g_lora|=5.68e-02
+    lora s2 update 1000/1500 loss=0.0565 |g_lora|=4.71e-02
+    lora s2 update 1250/1500 loss=0.0452 |g_lora|=6.97e-02
+    lora s2 update 1500/1500 loss=0.0670 |g_lora|=7.43e-02
+GATE: PASS | LoRA واقعاً آموزش دید | |g| نهایی=7.43e-02 ‖B‖=8.727
+      eval test: f1=0.4746 (oracle 0.4749, one-pair 0.4748)
+      eval gena: f1=0.5185 (oracle 0.5315, one-pair 0.5307)
+      eval genc: f1=0.3015 (oracle 0.3016, one-pair 0.3012)
+      eval genf: f1=0.3046 (oracle 0.3055, one-pair 0.2991)
+[seed 2] LoRA: OOD=0.3749 Test=0.4746 thr=0.55 | ΔOOD=+0.0086 ΔTest=+0.0377 | 1963s
+GATE: PASS | LoRA − frozen (matched): ΔOOD per seed=[0.0102, 0.0214, 0.0086] (فقط با bootstrap خانواده‌ای P7 قابل‌تفسیر است؛ seed-std نویز نمونه‌گیری را نمی‌گیرد)
+### p6_lora DONE
